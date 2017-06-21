@@ -26,9 +26,9 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="#funciona">¿Cómo funciona?</a></li>
           <li><a href="#invertir">¿Por qué nosotros?</a></li>
-          <li><a href="">Proyectos</a></li>
-          <li><a href="">Contacto</a></li>
-          <li><a href="">Ingresar</a></li>
+          <li><a href="/proyectos">Proyectos</a></li>
+          <li><a href="/contacto">Contacto</a></li>
+          <li><a href="login.php">Ingresar</a></li>
         </ul>
       </div>
     </div>
