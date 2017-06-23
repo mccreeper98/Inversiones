@@ -1,7 +1,9 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Home</title>
+  <title>Registro</title>
   <meta charset="utf-8">
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,66 +19,50 @@
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-<body>
-
-  <div class="slider fullscreen">
-
-   <nav>
-    <div class="nav-wrapper">
-      <div class="container">
-        <a href="#" class="brand-logo">Logo</a>
-        <ul id="nav-mobile" class="right hide-on-med-and-down">
-          <li><a href="#funciona">¿Cómo funciona?</a></li>
-          <li><a href="#invertir">¿Por qué nosotros?</a></li>
-          <li><a href="/proyectos">Proyectos</a></li>
-          <li><a href="/contacto">Contacto</a></li>
-          <li><a href="login.php">Ingresar</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-<main class="col s12">
-
-   <form class="col s12 m8 l4 push-m2 push-l4 z-depth-3 animated slideInUp" method="post" onsubmit="return agregar()" id="registro" autocomplete="off">
-    <div class="container">
-      <input type="email" name="correo"  id="correo" value="" class="col s12" placeholder="Correo"  autocomplete="off" maxlength="30" required>
-      <input type="text" name="nombre" id="nombre" value="" class="col s12" placeholder="Nombre(s)" autocomplete="off" maxlength="30" required>
-      <input type="text" name="app" id="app" value="" class="col s12" placeholder="Apellido Paterno" autocomplete="off" maxlength="20" required>
-      <input type="text" name="apm" id="apm" value="" class="col s12" placeholder="Apellido Materno" autocomplete="off" maxlength="20" required>
-      <input type="password" name="psw" id="psw" value="" class="col s12" placeholder="Contraseña"  required>
-      <input type="password" name="pswc" id="pswc" value="" class="col s12" placeholder="Confirme la Contraseña"  required>
-      <div class="col s12" style="padding-bottom: 50px;">
-        <input type="submit" id="action" class="btn col s12 waves-effect waves-light"  name="action" value="Registrar">
-      </div>
-    </div>
-  </form>
-
-</main>
-        <footer class="page-footer negrobg">
+<body bgcolor="#393646">
+  <main class="animated fadeIn">
+    <div class="row" style="height: 100vh; margin-bottom: 0px;">
+      <div class="col s12 m7 l6 white-text" style="background-color: #393646; height: 100%">
+        <form class="col s12 m10 push-m1" style="padding-top: 40px"method="post" onsubmit="return agregar()" id="registro" autocomplete="off">
+          <center><h5>Registrate para continuar</h5></center><br>
           <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
-              </div>
+            <input type="email" name="correo"  id="correo" value="" class="col s12" placeholder="Correo"  autocomplete="off" maxlength="30" required>
+            <input type="text" name="nombre" id="nombre" value="" class="col s12" placeholder="Nombre(s)" autocomplete="off" maxlength="30" required>
+            <input type="text" name="app" id="app" value="" class="col s6" placeholder="Apellido Paterno" autocomplete="off" maxlength="20" required>
+            <input type="text" name="apm" id="apm" value="" class="col s6" placeholder="Apellido Materno" autocomplete="off" maxlength="20" required>
+            <input type="password" name="psw" id="psw" value="" class="col s6" placeholder="Contraseña"  required>
+            <input type="password" name="pswc" id="pswc" value="" class="col s6" placeholder="Confirme la Contraseña"  required>
+            <div class="col s12" style="padding-bottom: 20px;">
+              <input type="submit" id="action" class="btn-large col s12 waves-effect waves-light negro animated bounceIn"  name="action" value="Registrar">
+            </div>
+            <div class="divider col s12"></div>
+            <div class="col s12 center" id="fbLogin" style="padding: 20px">
+              <button class='btn-large waves-effect waves-light fb col s12' type='submit' >Iniciar con Facebook
+                <i class='left'><img src="img/fb.png" height="28px" id="imgFbLogin"></i>
+              </button>
             </div>
           </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2017 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-          </div>
-        </footer>
+        </form>
+      </div>
+
+      <div class="col  m5 l6 hide-on-small-only" id="registroImg">
+        <img id="logoLogin" class="responsive-img" src="img/logob.png">
+      </div>
+    </div>
+  </main>
+  <!--Start of Tawk.to Script-->
+  <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+      var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+      s1.async=true;
+      s1.src='https://embed.tawk.to/59458844e9c6d324a4735eec/default';
+      s1.charset='UTF-8';
+      s1.setAttribute('crossorigin','*');
+      s0.parentNode.insertBefore(s1,s0);
+    })();
+  </script>
+  <!--End of Tawk.to Script-->
 
 </body>
 </html>

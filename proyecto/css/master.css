@@ -13,6 +13,11 @@ html, body {
     flex: 1 0 auto;
   }
 
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px; 
+}
 
 .slider.fullscreen {
     height: 100%;
@@ -155,8 +160,59 @@ hr {
     background-size: cover;
 }
 
+#registroImg{
+    background-image: url('../img/8.jpg'); 
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
+}
+
 #proyectos{
 
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 0px;
+}
+
+.registro{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 8px;
+    padding-left: 8px;
+    border-radius: 4px;
+    border: 2px solid white;
+    transition: .3s;
+}
+
+.registro:hover{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 8px;
+    padding-left: 8px;
+    border: 2px solid #6cfe6b;
+    transition: .3s;
+}
+
+.ingresar{
+    color: #393646;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 8px;
+    padding-left: 8px;
+    border-radius: 4px;
+    background-color: #6cfe6b;
+    border: 2px solid #6cfe6b;
+    transition: .3s;
+}
+
+.ingresar:hover{
+    color: #fff;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 8px;
+    padding-left: 8px;
+    background-color: #393646;
+    border: 2px solid #393646;
+    transition: .3s;
 }

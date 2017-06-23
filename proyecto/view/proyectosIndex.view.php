@@ -25,7 +25,7 @@
             </div>
           </div>
         </div>
-      
+
 
 <?php
  }
@@ -36,4 +36,12 @@
 }
 ?>
 </div>  
+
+<div class="col s12" style="padding-bottom: 50px">
+  <center>
+    <a href="proyectos" class="negro">
+      <U><B><h5>VER MÁS PROYECTOS <i class="material-icons">navigate_next</i></h5></B></U>
+    </a>
+  </center>
+</div>
           

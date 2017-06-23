@@ -43,7 +43,7 @@
           }
           ?>
           <div class="col s12 center" style="padding: 20px">
-            <button class='btn-large waves-effect waves-light negro col s12' type='submit' name='action'>Iniciar
+            <button class='btn-large waves-effect waves-light negro col s12 animated bounceIn' type='submit' name='action'>Iniciar
             </button>
           </div>
           <div class="divider col s12"></div>

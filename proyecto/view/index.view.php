@@ -27,16 +27,16 @@
             <li><a href="#funciona">¿Cómo funciona?</a></li>
             <li><a href="#invertir">¿Por qué nosotros?</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-            <li><a href="login.php">Ingresar</a></li>
+            <li><a href="registra.php"><span class="registro">Registrate</span></a></li>
+            <li><a href="login.php"><span class="ingresar">Ingresar</span></a></li>
           </ul>
         </div>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="#funciona">¿Cómo funciona?</a></li>
           <li><a href="#invertir">¿Por qué nosotros?</a></li>
           <li><a href="#proyectos">Proyectos</a></li>
-          <li><a href="#contacto">Contacto</a></li>
-          <li><a href="login.php">Ingresar</a></li>
+          <li><a href="registra.php"><span >Registrate</span</a></li>
+          <li><a href="login.php"><span >Ingresar</span></a></li>
         </ul>
       </div>
     </nav>
