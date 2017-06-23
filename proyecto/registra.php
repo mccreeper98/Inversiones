@@ -3,11 +3,11 @@ session_start();
 if ($_SESSION) {
   switch ($_SESSION['tipo']) {
     case '0':
-        header('Location: user');
+        header('Location: index.php');
       break;
 
     case '1':
-      header('Location: admin');
+      header('Location: index.php');
       break;
     
     default:
