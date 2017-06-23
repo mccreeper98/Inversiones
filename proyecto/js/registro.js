@@ -25,7 +25,7 @@ function agregar() {
 		},
 		success: function(respuesta){
 			if (respuesta === 'done') {
-				swal("Registro exitoso!","Se a Enviado un correo a: "+correo,"success");
+				swal("Registro Exitoso!","Se a Enviado un correo a: "+correo,"success");
 			}else{
 				if (respuesta === 'existe') {
 					sweetAlert("Error en el registro", "El correo "+ correo + "ya esta registrado", "error");

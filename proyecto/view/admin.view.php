@@ -29,7 +29,11 @@
           <li><a href="/proyectos">Proyectos</a></li>
           <li><a href="/contacto">Contacto</a></li>
           <li><ul id="dropdown" class="dropdown-content">
+<<<<<<< Updated upstream
             <li><a href="perfil.php">Perfil</a></li>
+=======
+            <li><a href="registrarP.php">Registrar Proyecto</a></li>
+>>>>>>> Stashed changes
             <li><a href="cerrar.php">Salir</a></li>
           </ul>
           <a class="btn dropdown-button" href="#!" data-activates="dropdown"><?php echo $_SESSION['user']; ?><i class="mdi-navigation-arrow-drop-down right"></i></a>

@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/master.css">
   <link rel="stylesheet" href="css/animate.css">
   <!--Import jQuery before materialize.js-->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,12 +22,12 @@
         <img id="logoLogin" class="responsive-img" src="img/logob.png">
       </div>
       <div class="col s12 m7 l6 white-text" style="background-color: #393646; height: 100%">
-        <form action="iniciar" method="post" class="col s12 m8 push-m2" style="padding-top: 80px">
+        <form action="iniciar.php" method="post" class="col s12 m8 push-m2" style="padding-top: 80px">
           <center><h5>Inicia tu sesión</h5></center>
           <br>
           <div class="input-field col s12">
             <i class="material-icons prefix">mail</i>
-            <input type="email" name="correo" class="validate" required="required">
+            <input type="text" name="correo" class="validate" required="required">
             <label for="correo">Correo</label>
           </div>
 
