@@ -46,9 +46,22 @@ nav{
     background-color: transparent;
 }
 
+hr {
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
 
 .centrado{
     position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.centradoR{
+    position: relative;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -78,13 +91,72 @@ nav{
 .negrobg{
 	background-color: #393646;
 }
+.amarrilo{
+    color: #f5cb23;
+}
+
+.amarillobg{
+    background-color: #f5cb23;
+}
 #funciona{
-	padding-top: 80px;
+	
 }
 #invertir{
 	padding-bottom: 80px;
 }
 #invertir img{
-
 	width: 80px;
+    padding-top: 20px;
+    padding-bottom: 50px:;
+}
+#invertir div{
+    margin-top: 15px;
+    box-shadow: rgba(221, 221, 221, 0.53) 0px 0px 7px;
+    transition: .3s;
+}
+
+#invertir div:hover{
+    box-shadow: rgba(221, 221, 221, 0.53) 0px 0px 150px;
+    transition: .3s;
+}
+
+#logoLogin{
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(0%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.fb{
+
+    background-color: #4c71a3;
+
+}
+
+.fb:hover{
+
+    background-color: #40608b;
+
+}
+
+#imgFbLogin{
+    position: relative;
+    transform: translate(0%, -50%);
+    -webkit-transform: translate(-14%, 25%);
+}
+
+#loginImg{
+    background-image: url('../img/7.jpg'); 
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position-x: 50%;
+    background-position-y: 50%;
+    background-size: cover;
+}
+
+#proyectos{
+
+    padding-top: 40px;
+    padding-bottom: 40px;
 }

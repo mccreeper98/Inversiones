@@ -3,11 +3,11 @@ session_start();
 if ($_SESSION) {
   switch ($_SESSION['tipo']) {
     case '0':
-        header('Location: user');
+        require 'view/user.view.php';
       break;
 
     case '1':
-      header('Location: admin');
+      require 'view/admin.view.php';
       break;
     
     default:
