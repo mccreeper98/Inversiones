@@ -121,7 +121,7 @@ hr {
 }
 
 #invertir div:hover{
-    box-shadow: rgba(221, 221, 221, 0.53) 0px 0px 150px;
+    box-shadow: rgba(221, 221, 221, 3) 2px 2px 150px;
     transition: .3s;
 }
 
@@ -215,4 +215,30 @@ hr {
     background-color: #393646;
     border: 2px solid #393646;
     transition: .3s;
+}
+
+#sidenav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 996;
+    will-change: opacity;
+}
+
+.progress {
+    position: relative;
+    height: 30px;
+    display: block;
+    width: 100%;
+    background-color: #acece6;
+    border-radius: 2px;
+    margin: .5rem 0 1rem 0;
+    overflow: hidden;
+}
+
+#contacto{
+    background-image: url('../img/7.jpg');
 }

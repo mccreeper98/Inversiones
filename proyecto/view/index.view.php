@@ -20,13 +20,14 @@
   <div class="slider fullscreen">
     <nav>
       <div class="nav-wrapper">
-        <div class="container">
-          <a href="#" class="brand-logo"><img src="img/logob.png" height="80px" style="padding-top: 20px"></a>
+        <div class="">
+          <a href="#" class="brand-logo"><img src="img/logob.png" height="80px" style="padding-top: 20px; margin-left: 20px;"></a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="#funciona">¿Cómo funciona?</a></li>
             <li><a href="#invertir">¿Por qué nosotros?</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
             <li><a href="registra.php"><span class="registro">Registrate</span></a></li>
             <li><a href="login.php"><span class="ingresar">Ingresar</span></a></li>
           </ul>
@@ -35,6 +36,7 @@
           <li><a href="#funciona">¿Cómo funciona?</a></li>
           <li><a href="#invertir">¿Por qué nosotros?</a></li>
           <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
           <li><a href="registra.php"><span >Registrate</span</a></li>
           <li><a href="login.php"><span >Ingresar</span></a></li>
         </ul>
@@ -47,7 +49,7 @@
         <img src="img/1.jpg">
         <div class="centrado textSlide animated zoomIn">
           <h4> <span class="acento">Invierte</span> en acciones inmobiliarias seguras con facilidad.</h4>
-          <center><a href="#" class="waves-effect waves-light btn-large negrobg"><i class="material-icons right">navigate_next
+          <center><a href="proyectos" class="waves-effect waves-light btn-large negrobg"><i class="material-icons right">navigate_next
           </i><b>Comienza a invertir</b></a></center>
         </div>
       </li>
@@ -56,7 +58,7 @@
         <img src="img/2.jpg">
         <div class="centrado textSlide animated fadeIn">
           <h4>No tienes que salir,<span class="acento"> invierte</span> desde tu propio hogar.</h4>
-          <center><a href="#" class="waves-effect waves-light btn-large negrobg"><i class="material-icons right">navigate_next
+          <center><a href="proyectos" class="waves-effect waves-light btn-large negrobg"><i class="material-icons right">navigate_next
           </i><b>Comienza a invertir</b></a></center>
 
         </div>
@@ -66,7 +68,7 @@
         <img src="img/3.jpg">
         <div class="centrado textSlide animated fadeIn">
           <h4>Las inversiones inmobiliarias de una manera <span class="acento">simplificada.</span></h4>
-          <center><a href="#" class="waves-effect waves-light btn-large negrobg"><i class="material-icons right">navigate_next
+          <center><a href="proyectos" class="waves-effect waves-light btn-large negrobg"><i class="material-icons right">navigate_next
           </i><b>Comienza a invertir</b></a></center>
 
         </div>
@@ -76,7 +78,7 @@
         <img src="img/4.jpg">
         <div class="centrado textSlide animated fadeIn">
           <h4><span class="acento">No pierdas tiempo</span> y disfruta mientras tu dinero genera rendimiento.</h4>
-          <center><a href="#" class="waves-effect waves-light btn-large negrobg"><i class="material-icons right">navigate_next
+          <center><a href="proyectos" class="waves-effect waves-light btn-large negrobg"><i class="material-icons right">navigate_next
           </i><b>Comienza a invertir</b></a></center>
 
         </div>
@@ -136,7 +138,7 @@
     <div class="parallax-container white-text">
       <div class="centrado center">
         <h4>¡No esperes más!</h4>
-        <h5>Con tan solo  $___ puedes empezar a invertir en desarrollo inmobiliario.</h5>
+        <h5>Con tan solo  $<input type="text" placeholder="50,000.00" style="width: 80px; margin-left: 10px; margin-right: 10px" name=""> puedes empezar a invertir en desarrollo inmobiliario.</h5>
         <br>
         <h5><a href="" class="acento"><strong><u>Comienza a invertir</u></strong></a></h5>
       </div>
