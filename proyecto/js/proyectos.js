@@ -1,6 +1,8 @@
 
 $("#registro").on("submit",function(e){
 
+	alert("si jala");
+
 	e.preventDefault();
 	var formData = new FormData(document.getElementById('registro'));
 
