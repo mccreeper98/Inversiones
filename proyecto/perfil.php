@@ -3,12 +3,12 @@ session_start();
 	if ($_SESSION) {
   switch ($_SESSION['tipo']) {
     case '0':
-        require 'view/perfil.view.php';
-      break;
+        require 'view/perfilCompleto.view.php';
+    break;
     
     default:
         require 'view/denegado.view.php';
-      break;
+    break;
   }
 }else{
   require 'view/index.view.php';

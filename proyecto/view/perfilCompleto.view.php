@@ -42,9 +42,9 @@
      <div class="row">
        <form class="col s12 z-depth-3" method="post" onsubmit="return agregar()" id="registro" autocomplete="off">
     <div class="container">
-      <h3 class="grey-text" style="padding-top: 50px">Completa tu perfil:</h3>
+      <h3 class="grey-text" style="padding-top: 50px">Perfil:</h3>
       <hr style="padding-bottom: 40px">
-      <input type="number" name="telefono"  id="telefono" value="" class="col s12 m6" placeholder="Telefono"  autocomplete="off" maxlength="15" required="required">
+      <input type="number" name="telefono"  id="telefono" value="" class="col s12 m6" placeholder="Telefono"  autocomplete="off" maxlength="15" required="required" disabled>
       <input type="text" name="clave" id="clave" value="" class="col s12 m6" placeholder="Clave Interbancaria" autocomplete="off" maxlength="30" required="required">
       <input type="text" name="rfc" id="rfc" value="" class="col s12 m6" placeholder="RFC" autocomplete="off" maxlength="20" required="required">
       <h6 class="col s12 grey-text">Dirección</h6>
@@ -92,7 +92,8 @@
             </div>
           </div>
       <div class="col s12 " style="padding-bottom: 60px; padding-top: 30px">
-        <a class=" col s12 m6 push-m3 waves-effect waves-light btn-large">Actualizar perfil</a>
+        <a class=" col s12 m5 push-m1 waves-effect waves-light btn-large">Editar perfil</a>
+        <input type="submit" name="" class=" col s12 m5 push-m1 waves-effect waves-light btn-large" value="Actualizar">
       </div>
     </div>
   </form>
