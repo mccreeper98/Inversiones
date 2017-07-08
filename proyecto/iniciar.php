@@ -7,7 +7,7 @@ if (isset($_POST['correo']) || isset($_POST['psw'])) {
 	$sgrdd = "SHA256";
 	//$pswH = hash($sgrdd, $psw);
 	$queryUsuario = "SELECT Email FROM usuario";
-	$queryPsw = "SELECT Psw,Usuario,Tipo FROM usuario WHERE Email='$correo'"; 
+	$queryPsw = "SELECT idUsr,Psw,Usuario,Tipo FROM usuario WHERE Email='$correo'"; 
 
 } else {
 
@@ -36,6 +36,7 @@ if (empty($correo) || empty($psw)) {
 								session_start();
 								$_SESSION['tipo'] = '0';
 								$_SESSION['user'] = $passU['Usuario'];
+								$_SESSION['id'] = $passU['idUsr']; 
 								header("Location: index.php");
 								die();
 							}

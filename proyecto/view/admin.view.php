@@ -24,10 +24,10 @@
           <a href="#" class="brand-logo"><img src="img/logob.png" height="80px" style="padding-top: 20px"></a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="#funciona">Administrar</a></li>
-            <li><a href="#invertir">Proyectos</a></li>
-            <li><a href="#proyectos">Perfil</a></li>
-            <li><a href="registra.php"><span><?php echo $_SESSION['user']; ?></span></a></li>
+            <li><a href="registrarP.php">Administrar</a></li>
+            <li><a href="proyectos">Proyectos</a></li>
+            <li><a href="#">Perfil</a></li>
+            <li><a href="3"><span><?php echo $_SESSION['user']; ?></span></a></li>
             <li><a href="cerrar.php"><span class="ingresar">Cerrar Sesión</span></a></li>
           </ul>
         </div>
