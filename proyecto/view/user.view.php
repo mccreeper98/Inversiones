@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Home</title>
+  <title><?php echo $_SESSION['user']; ?></title>
   <meta charset="utf-8">
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -21,21 +21,21 @@
     <nav>
       <div class="nav-wrapper">
         <div class="container">
-          <a href="#" class="brand-logo"><img src="img/logob.png" height="80px" style="padding-top: 20px"></a>
+          <a href="index" class="brand-logo"><img src="img/logob.png" height="80px" style="padding-top: 20px"></a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="#funciona">Ayuda</a></li>
-            <li><a href="#invertir">Mis Proyectos</a></li>
-            <li><a href="#proyectos">Perfil</a></li>
-            <li><a href="registra.php"><span><?php echo $_SESSION['user']; ?></span></a></li>
+            <li><a href="misproyectos">Mis Proyectos</a></li>
+            <li><a href="perfil">Perfil</a></li>
+            <li><a href="#"><span class="registro">Bienvenido <?php echo $_SESSION['user']; ?></span></a></li>
             <li><a href="cerrar.php"><span class="ingresar">Cerrar Sesión</span></a></li>
           </ul>
         </div>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="#funciona">Ayuda</a></li>
-          <li><a href="#invertir">Mis Proyectos</a></li>
-          <li><a href="#proyectos">Perfil</a></li>
-          <li><a href="registra.php"><span ><?php echo $_SESSION['user']; ?></span</a></li>
+          <li><a href="misproyectos">Mis Proyectos</a></li>
+          <li><a href="perfil">Perfil</a></li>
+          <li><a href="registra.php"><span ><?php echo $_SESSION['user']; ?></span></a></li>
           <li><a href="cerrar.php"><span >Cerrar Sesión</span></a></li>
         </ul>
       </div>

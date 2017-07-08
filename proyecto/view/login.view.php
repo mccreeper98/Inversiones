@@ -57,7 +57,7 @@
           <p><a href="#" class="acento">Olvidé mi contraseña</a></p>
           <p>
             ¿No tienes cuenta?
-            <a href="registra.php" class="acento">Registrate aquí</a>
+            <a href="registra" class="acento">Registrate aquí</a>
             para que tengas acceso a todos los proyectos.
           </p>
         </div>

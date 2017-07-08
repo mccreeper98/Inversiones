@@ -1,0 +1,73 @@
+#Evitar entrar a cerpetas si no hay index
+Options -Indexes
+
+#Paginas de error
+ErrorDocument 500 /
+ErrorDocument 404 /
+ErrorDocument 403 /
+ErrorDocument 401 /
+ErrorDocument 400 /
+
+
+#Ocultar extenciones
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.html
+
+#Evitar lectura de archivos ocultos
+RewriteCond %{SCRIPT_FILENAME} -d [OR]
+RewriteCond %{SCRIPT_FILENAME} -f
+RewriteRule "(^|/)\." - [F]
+
+#Comprimir archivos
+<IfModule mod_deflate.c>
+
+    # Forzar compresi�n tambi�n para las cabeceras malformadas
+    # http://developer.yahoo.com/blogs/ydn/posts/2010/12/pushing-beyond-gzipping
+    <IfModule mod_setenvif.c>
+        <IfModule mod_headers.c>
+            SetEnvIfNoCase ^(Accept-EncodXng|X-cept-Encoding|X{15}|~{15}|-{15})$ ^((gzip|deflate)\s*,?\s*)+|[X~-]{4,13}$ HAVE_Accept-Encoding
+            RequestHeader append Accept-Encoding "gzip,deflate" env=HAVE_Accept-Encoding
+        </IfModule>
+    </IfModule>
+
+    # Comprimir los contenidos que sean de cualquiera de estos tipos
+    <IfModule mod_filter.c>
+        AddOutputFilterByType DEFLATE application/atom+xml \
+                                      application/javascript \
+                                      application/json \
+                                      application/rss+xml \
+                                      application/vnd.ms-fontobject \
+                                      application/x-font-ttf \
+                                      application/x-web-app-manifest+json \
+                                      application/xhtml+xml \
+                                      application/xml \
+                                      font/opentype \
+                                      image/svg+xml \
+                                      image/x-icon \
+                                      text/css \
+                                      text/html \
+                                      text/plain \
+                                      text/x-component \
+                                      text/xml
+    </IfModule>
+
+</IfModule>
+
+
+#Evitar lectura de .htaccess
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+# DO NOT REMOVE THIS LINE AND THE LINES BELOW IPDENYID:ySaTusuneD
+deny from 192.168.9.214
+# DO NOT REMOVE THIS LINE AND THE LINES ABOVE ySaTusuneD:IPDENYID
+

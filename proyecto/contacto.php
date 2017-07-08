@@ -47,7 +47,7 @@
 
   <main>
   <div class="row">
-      <div class="col s12 m8 push-m2 z-depth-1" style="background-color: #fff; border-radius: 10px; margin-top: 80px;padding-top: 30px;padding-bottom: 50px; margin-bottom: 50px">
+      <div class="col s12 m8 push-m2 z-depth-1" style="background-color: #fff; border-radius: 10px; margin-top: 80px;padding-top: 30px;padding-bottom: 50px; margin-bottom: 50px;padding-left: 40px;padding-right: 40px">
       <div class="col s12 center"> <h5><b>Contacto</b></h5><h5>¿Te gustaría que te llamemos o prefieres comunicarte por email?</h5></div>
       <div class="col s12 m6 center" id="telefono">
         <img src="img/phone-receiver.png">
@@ -78,31 +78,7 @@
   </div>
   </main>
 
-      <footer class="page-footer negrobg">
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Footer Content</h5>
-              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Links</h5>
-              <ul>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="footer-copyright">
-          <div class="container">
-            © 2017 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-          </div>
-        </div>
-      </footer>
+<?php require 'footer.php'; ?>
 
       <!--Start of Tawk.to Script-->
       <script type="text/javascript">

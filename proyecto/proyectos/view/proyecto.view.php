@@ -48,11 +48,22 @@
 
 
 	<main>
-	<div class="z-depth-2 row" style="padding: 20px;margin: 10px; margin-top: 75px;">
+	<div class="row">
 	<div class="col s12 center" style="padding-bottom: 20px;"><h4>Nombre proyecto</h4></div>
+
+	  <div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/640/480/city/"></a>
+    <a class="carousel-item" href="#two!"><img src="http://lorempixel.com/640/480/city/"></a>
+    <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/640/480/city/"></a>
+    <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/640/480/city/"></a>
+    <a class="carousel-item" href="#five!"><img src="http://lorempixel.com/640/480/city/"></a>
+  </div>
+   <div class="progress col s12">
+   	  <div class="centradoR"><center><b>20% fondeado</b></center></div>
+      <div class="determinate center negro" style="width: 20%"></div>
+  </div>
 	<div class="col s12 m6">
 		
-<img class="materialboxed col s12 " data-caption="DATOS DE LA IMAGEN" src="../img/example2.jpg">
 
 <div class="col s12" style="margin-top: 15px; border: 1px solid #393646; border-radius: 10px">
 	<p><b>Descripción del proyecto</b></p>
@@ -62,9 +73,7 @@
 	<p><b>Monto requerido: $1,000,000.00</b></p>
 </div>
 
-  <div class="progress col s12" style="margin-top: 20px;">
-      <div class="determinate center negro" style="width: 20%">20% fondeado</div>
-  </div>
+
 
 	</div>
 
@@ -93,45 +102,24 @@
 	</div>
 	</main>
 
-	<footer class="page-footer negrobg">
-		<div class="container">
-			<div class="row">
-				<div class="col l6 s12">
-					<h5 class="white-text">Footer Content</h5>
-					<p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-				</div>
-				<div class="col l4 offset-l2 s12">
-					<h5 class="white-text">Links</h5>
-					<ul>
-						<li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-						<li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-						<li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-						<li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="footer-copyright">
-			<div class="container">
-				© 2017 Copyright Text
-				<a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-			</div>
-		</div>
-	</footer>
-
+<?php require 'footer.php'; ?>
 	<!--Start menu-->
 	<script type="text/javascript">
 		$(".button-collapse").sideNav();
 	</script>
 	<!--End menu-->
        
-      <!--Start materialbox-->
+      <!--Start corrousel-->
 	<script type="text/javascript">
-		 $(document).ready(function(){
-    $('.materialboxed').materialbox();
-  });
+    $(document).ready(function(){
+      $('.carousel').carousel({
+      	dist: -50,
+      	indicators: true
+      	});
+    });
+        
 	</script>
-	<!--End materialbox-->
+	<!--End corrousel-->
 
 	      <!--Start of Tawk.to Script-->
       <script type="text/javascript">

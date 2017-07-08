@@ -43,8 +43,12 @@
             </div>
           </div>
         </form>
+        <div class="col s12 center" style="padding: 20px;">
+          <p>
+            ¿Ya tienes cuenta? <a href="login" class="acento">Ingresa aquí </a>para que tengas acceso a todos los proyectos.
+          </p>
+        </div>
       </div>
-
       <div class="col  m5 l6 hide-on-small-only" id="registroImg">
         <img id="logoLogin" class="responsive-img" src="img/logob.png">
       </div>
