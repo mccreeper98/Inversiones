@@ -50,23 +50,71 @@ if (empty($nombre)) {
 	echo "Es necesaria una taza";
 }elseif (empty($descripcion)) {
 	echo "Es necesaria una descripcion";
-}elseif (isset($_FILES['imagen'])){
+}elseif (isset($nombre) AND isset($porcentaje) AND isset($requerido) AND isset($inversion) AND isset($financiamieto) AND isset($tipo) AND isset($sector) AND isset($plazo) AND isset($taza) AND isset($descripcion)) {
 	
+	if (isset($_FILES['imagen'])) {
+	
+	//Cantidad de imagenes	
 	$cantidad= count($_FILES["imagen"]["tmp_name"]);
-	
-	for ($i=0; $i<$cantidad; $i++){
-	//Comprobamos si el fichero es una imagen
-	if ($_FILES['imagen']['type'][$i]=='image/png' || $_FILES['imagen']['type'][$i]=='image/jpeg'){
-	
-	//Subimos el fichero al servidor
-	move_uploaded_file($_FILES["imagen"]["tmp_name"][$i], $_FILES["imagen"]["name"][$i]);
-	$validar=true;
-	}
-	else $validar=false;
-	
-	
-}
-}
 
+	//Extensiones permitidas
+	$extensiones = array('jpg', 'jpeg', 'gif', 'png', 'bmp');
+
+	//Insercion de los datos
+	$subirDatos = "INSERT INTO proyecto (Por, Nombre, Req, Inv, Fina, Tip, Sector, Plazo, Taza, Des) VALUES ('$porcentaje', '$nombre', '$requerido', '$inversion', '$financiamieto', 'tipo', 'sector', 'plazo','$taza', '$descripcion')";
+	if ($conn->query($subirDatos)) {
+		$last_id = $conn->lastInsertId();
+		echo $cantidad;
+	/*	
+	for ($i=0; $i<$cantidad; $i++){
+	
+	if ($_FILES["imagen"]['error'][$i] === 0) {
+		//Comvertimos las imagenes a binarias	
+		$imagenBinaria = addslashes(file_get_contents($_FILES['imagen']['tmp_name'][$i]));
+
+		$nombreArchivo = $_FILES['imagen']['name'][$i];
+
+		//Obtenemos la extensino para poder comparar
+		$extebsionimg = strtolower(end(explode('.', $nombreArchivo)));
+		//Verificamos que sea una extension permitida, si no lo es mostramos un mensaje de error
+		if (!in_array($extebsionimg, $extennsiones)) {
+			echo "Solo se permiten archivos con las siguientes extensiones : ".implode(',', $extennsiones)."";
+		}else{
+			//Si la extensión es correcta, procedemos a comprobar el tamaño del archivo subido
+		//Y definimos el máximo que se puede subir
+		//Por defecto el máximo es de 2 MB, pero se puede aumentar desde el .htaccess o en la directiva 'upload_max_filesize' en el php.ini
+			$tamañoArchivo = $_FILES['imagen']['size'][$i];//obtenemos el tamaño del archivo en Bytes
+			$tamañoArchivoKB = round(intval(strval($tamañoArchivo/ 1024)));//Pasamos el tamaño del archivo a KB
+			$tamañoMaximoKB = "2048";//Tamño maximo expresado en KB
+			$tamañoMaximoBytes = $tamañoMaximoKB * 1024; // ->2097152 Bytes - 2MB
+
+			//Comprobamos el tamaño del archivo, y mostramos un mensaje si es mayor al tamao expresado en Bytes
+			if ($tamañoArchivo > $tamañoMaximoBytes) {
+				echo "El archivo ".$nombreArchivo." es demasiado grande. El tamaño maximo de archivo es de ".$tamañoMaximoKB."Kb.";
+			}else{
+				//Si el tamaño es correcto, subimos los datos
+				$subirImg = "INSERT INTO images (idProy, img) VALUES ('$last_id','$imagenBinaria')";
+				if ($conn->query($subirImg)) {
+					if ($cantidad === $i) {
+						echo "done";
+					}
+				}else{
+					echo "Error al subir imagen";
+				}
+
+			}//Fin condicional tamaño
+
+		}//Fin condicional extennsiones
+	}//Fin error img
+	
+	}//Fin for*/
+	}else{
+		echo "Parece que ha habido un error Recargue la página e intentelo nuevamente.";
+	}//Fin InsertDatos
+	}else{
+		echo "Seleccione una imagen.";
+	}
+
+}//Fin condicional para saber si todos los campos estan completos
 
 ?>
