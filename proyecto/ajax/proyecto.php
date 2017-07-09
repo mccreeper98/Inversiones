@@ -1,77 +1,72 @@
-<?php
+<?php 
 
-	if (isset($_POST['nombre']) || isset($_POST['porcentaje']) || isset($_POST['requerido']) || isset($_POST['inversion']) || isset($_POST['financiamiento']) || isset($_POST['tipo']) || isset($_POST['sector']) || isset($_POST['plazo']) || isset($_POST['taza']) || isset($_POST['descripcion']) || ($_FILES['imagen']['error'] === 4)) {
+require '../conn.php';//Archivo de conexion a la base de datos
 
+//Definicion de las variables necesarias
+$nombre = $_POST['nombre'];
+$porcentaje = $_POST['porcentaje'];
+$requerido = $_POST['requerido'];
+$inversion = $_POST['inversion'];
+$financiamieto = $_POST['financiamieto'];
+$tipo = $_POST['tipo'];
+$sector = $_POST['sector'];
+$plazo = $_POST['plazo'];
+$taza = $_POST['taza'];
+$descripcion = $_POST['descripcion'];
 
-		$nombre = filter_var($_POST['nombre'], FILTER_SANITIZE_STRING, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-		$porcentaje = filter_var($_POST['porcentaje'], FILTER_SANITIZE_STRING, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-		$requerido = filter_var($_POST['requerido'], FILTER_SANITIZE_STRING, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-		$inversion = filter_var($_POST['inversion'], FILTER_SANITIZE_STRING, FILTER_SANITIZE_FULL_SPECIAL_CHARS);	
-		$financiamiento = filter_var($_POST['financiamiento'], FILTER_SANITIZE_STRING, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-		$tipo = filter_var($_POST['tipo'], FILTER_SANITIZE_STRING, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-		$sector = filter_var($_POST['sector'], FILTER_SANITIZE_STRING, FILTER_SANITIZE_FULL_SPECIAL_CHARS);	
-		$plazo = filter_var($_POST['plazo'], FILTER_SANITIZE_STRING, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-		$taza = filter_var($_POST['taza'], FILTER_SANITIZE_STRING, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-		$des = filter_var($_POST['descripcion'], FILTER_SANITIZE_STRING, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-		$descripcion = n12br($des);
+//Filtro anti-XSS
+$caracteres_malos = array("<", ">", "\"", "'", "/", "<", ">", "'", "/");
+$caracteres_buenos = array("&lt;", "&gt;", "&quot;", "&#x27;", "&#x2F;", "&#060;", "&#062;", "&#039;", "&#047;");
 
-		$imagenBinaria = addslashes(file_get_contents($_FILES['imagen']['tmp_name']));
+$nombre = str_replace($caracteres_malos,$caracteres_buenos ,$nombre);
+$porcentaje = str_replace($caracteres_malos,$caracteres_buenos ,$porcentaje);
+$requerido = str_replace($caracteres_malos,$caracteres_buenos ,$requerido);
+$inversion = str_replace($caracteres_malos,$caracteres_buenos ,$inversion);
+$financiamieto = str_replace($caracteres_malos,$caracteres_buenos ,$financiamieto);
+$tipo = str_replace($caracteres_malos,$caracteres_buenos ,$tipo);
+$sector = str_replace($caracteres_malos,$caracteres_buenos ,$sector);
+$plazo = str_replace($caracteres_malos,$caracteres_buenos ,$plazo);
+$taza = str_replace($caracteres_malos,$caracteres_buenos ,$taza);
+$descripcion = str_replace($caracteres_malos,$caracteres_buenos ,$descripcion);
+$descripcion = nl2br($descripcion);
 
-		$nombredelArchivo = $_FILES['imagen']['name'];
+if (empty($nombre)) {
+	echo "Es necesario un nombre";
+}elseif (empty($porcentaje)) {
+	echo "Es necesario un porcentaje";
+}elseif (empty($requerido)) {
+	echo "Es necesario un monto requerido";
+}elseif (empty($inversion)) {
+	echo "Es necesaria una inversion minima";
+}elseif (empty($financiamieto)) {
+	echo "Es necesario un tipo de financiamieto";
+}elseif (empty($tipo)) {
+	echo "Es necesario un tipo de proyecto";
+}elseif (empty($sector)) {
+	echo "Es necesario un sector";
+}elseif (empty($plazo)) {
+	echo "Es necesario un plazo";
+}elseif (empty($taza)) {
+	echo "Es necesaria una taza";
+}elseif (empty($descripcion)) {
+	echo "Es necesaria una descripcion";
+}elseif (isset($_FILES['imagen'])){
+	
+	$cantidad= count($_FILES["imagen"]["tmp_name"]);
+	
+	for ($i=0; $i<$cantidad; $i++){
+	//Comprobamos si el fichero es una imagen
+	if ($_FILES['imagen']['type'][$i]=='image/png' || $_FILES['imagen']['type'][$i]=='image/jpeg'){
+	
+	//Subimos el fichero al servidor
+	move_uploaded_file($_FILES["imagen"]["tmp_name"][$i], $_FILES["imagen"]["name"][$i]);
+	$validar=true;
+	}
+	else $validar=false;
+	
+	
+}
+}
 
-		$extenciones = array('jpg','jpeg','gif','png','bmp');
-
-		$extencion = strtolower(end(explode('.', $nombredelArchivo)));
-
-		if (!in_array($extencion, $extenciones)) {
-			/*die('Solo se permiten archivos con las siguientes extensiones: '.implode(', ', $extenciones));*/
-			echo "extencion";
-			return false;
-		}else{
-
-			$tamanioArchivo = $_FILES['imagen']['size'];
-			$tamanioArchivoKB = round(intval(strval($tamanioArchivo / 1024)));
-
-			$tamanioMaximoKB = "2048";
-			$tamanioMaximoBytes = $tamanioMaximoKB*1024; // ->2097152 Bytes -> 2MB
-
-			if ($tamanioArchivo > $tamanioMaximoBytes) {
-				/*die("El archivo ".$nombredelArchivo." es demaciado grande. El tamaño maximo del archivo es de ".$tamanioMaximoKB."KB");*/
-				echo "tamaño";
-				return false;
-			}else{
-
-				try{
-
-					require '../conn.php';
-
-					$recuperarProyectos = "SELECT Nombre FROM proyectos";
-					$buscarProyectos = $conn->query($recuperarProyectos);
-					foreach ($buscarProyectos as $p) {
-						if ($nombre == $p['Nombre']) {
-							echo "existe";
-							return false;
-						}
-					}
-
-					$queryAgregarProyecto = "INSERT INTO proyecto (Por,Nombre,Req,Inv,Fina,Tip,Sector,Plazo,Taza,Des) VALUES ('$porcentaje','$nombre','$requerido','$inversion','$financiamiento','tipo','$sector','$plazo','$taza','$descripcion')";
-					$queryAgregarImg = "INSERT INTO images (idProy,img) VALUES ('$nombre','$imagenBinaria')";
-
-					$conn->query($queryAgregarProyecto);
-					$conn->query($queryAgregarImg);
-					echo "done";
-
-				}catch(PDOException $e){
-					echo "Error";
-				}
-
-			}
-
-		}
-
-	 }
-	 else{
-	 	echo "Error";
-	 }
 
 ?>

@@ -46,36 +46,20 @@
     
 <main class="col s12">
   
-  <form accept-charset="utf-8" method="POST" id="registro" enctype="multipart/form-data">
+  <form accept-charset="utf-8" method="POST" id="registro" enctype="multipart/form-data" autocomplete="off">
           <h5>Agegar Proyecto:</h5>
           <div class="input-field col s12 m6">
-            <input placeholder="Nombre" name="nombre" id="nombre" type="text" class="validate" maxlength="50" required>
+            <input placeholder="Nombre" name="nombre" id="nombre" type="text" class="validate" maxlength="50" required="required">
           </div>
-          <div class="input-field col s12 m4">
-          <select id="porcentaje">
-
-            <?php
-            echo "<option value='' disabled selected require>Porcentaje del proyecto</option>";
-            for ($i=0; $i <=100 ; $i++) {
-              echo "<option value='$i A'>$i</option>";
-            }
-             ?>
-          </select>
-          <label>Porcentaje</label>
-          <script type="text/javascript">   
-            $(document).ready(function() {
-              $('select').material_select();
-            });
-          </script>
-        </div>
+          <input type="number" name="porcentaje" placeholder="Porcentaje" min="0" max="100" required="required" maxlength="3">
           <div class="input-field col s12 m6">
-            <input placeholder="Monto Requerido" id="requerido" type="text" class="validate" maxlength="10" required>
+            <input placeholder="Monto Requerido" pattern="[0-9,]{1,10}" name="requerido" id="requerido" type="text" class="validate" maxlength="10" required>
           </div>
           <div class="input-field col s12 m6">
-            <input placeholder="Inversion Minima" id="inversion" type="text" class="validate" maxlength="5" required>
+            <input placeholder="Inversion Minima" name="inversion" id="inversion" type="text" class="validate" pattern="[0-9,]{1,5}" maxlength="5" required>
           </div>
           <div class="input-field col s12 m6">
-            <input placeholder="Tipo de Financiamieto" id="financiamieto" type="text" class="validate" maxlength="20" required>
+            <input placeholder="Tipo de Financiamieto" name="financiamieto" id="financiamieto" type="text" class="validate" maxlength="20" required>
           </div>
           <div class="input-field col s12 m6">
             <input placeholder="Tipo de Proyecto" name="tipo" id="tipo" type="text" class="validate" maxlength="20" required>
@@ -90,13 +74,14 @@
             <input placeholder="Taza Anual" name="taza" type="text" class="validate" maxlength="5" required>
           </div>
           <div class="input-field col s12 m6">
-            <textarea placeholder="Descripcion" name="descripcion" maxlength="50" required>
+          <label>Descripción</label>
+            <textarea placeholder="Descripcion" name="descripcion" required="required">
             </textarea>
           </div>
           <div class="file-field input-field col s12">
             <div class="btn">
-              <span>Subir imagen</span>
-              <input type="file" name="imagen" required>
+              <span>Subir imagenes</span>
+              <input type="file" name="imagen" multiple="multiple" required="required">
             </div>
             <div class="file-path-wrapper">
               <input class="file-path validate" type="text">
@@ -155,6 +140,36 @@ End of Tawk.to Script-->
     });
 </script>
 <!--End parrallax-->
+
+<script>
+    $("#registro").on("submit", function(e){
+      e.preventDefault();
+      var formData = new FormData(document.getElementById("registro"));
+
+      $.ajax({
+        url: "ajax/proyecto.php",
+        type: "POST",
+        dataType: "HTML",
+        data: formData,
+        cache: false,
+        contentType: false,
+        processData: false
+      }).done(function(echo){
+        if (echo === 'done') {
+            swal({    
+                  title: "Registro Exitoso!",
+                  text: "Se ha Guardado la Informacion del Proyecto.",   
+                  type: "success",            
+                  closeOnConfirm: false }, 
+                  function(){   
+                    location.reload(); 
+                  });
+          }else{
+              sweetAlert("Error en el registro",echo, "error");
+            }
+      });
+    });
+    </script>
 
 </body>
 </html>

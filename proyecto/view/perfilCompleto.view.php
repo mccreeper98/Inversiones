@@ -1,8 +1,3 @@
-<?php
-  
-  session_start();
-
- ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -123,7 +118,7 @@
 </main>
 <?php require 'footer.php'; ?>
 
-<script>
+  <script>
     $("#perfil").on("submit", function(e){
       e.preventDefault();
       var formData = new FormData(document.getElementById("perfil"));
