@@ -105,9 +105,9 @@
               <input class="file-path validate" type="text">
             </div>
           </div>
-      <div class="col s12 " style="padding-bottom: 60px; padding-top: 30px">
+      <div class="col s12" style="padding-bottom: 60px; padding-top: 30px">
         <!--a class=" col s12 m5 push-m1 waves-effect waves-light btn-large">Actualizar</a-->
-        <input type="submit" name="action" id="action" class=" col s12 m5 push-m1 waves-effect waves-light btn-large" value="Guardar">
+        <input type="submit" name="action" id="action" class=" col s12 m6 push-m3 waves-effect waves-light btn-large" value="Guardar">    
       </div>
     </div>
   </form>

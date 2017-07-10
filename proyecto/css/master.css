@@ -116,13 +116,12 @@ hr {
 }
 #invertir div{
     margin-top: 15px;
-    box-shadow: rgba(221, 221, 221, 0.53) 0px 0px 7px;
     transition: .3s;
 }
 
-#invertir div:hover{
-    box-shadow: rgba(221, 221, 221, 3) 2px 2px 150px;
-    transition: .3s;
+#invertir div:hover {
+    box-shadow: rgba(221, 221, 221, 1) 2px 2px 150px;
+    transition: .6s;
 }
 
 #logoLogin{
@@ -281,4 +280,14 @@ hr {
     background-color: rgb(195, 195, 195);
     transition: background-color .3s;
     border-radius: 50%;
+}
+
+.pdf{
+    width: 10%;
+    transition: .3s;
+}
+.pdf:hover{
+
+    width: 13%;
+    transition: .3s;
 }
