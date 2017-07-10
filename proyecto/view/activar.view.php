@@ -1,3 +1,8 @@
+<?php 
+  if (!isset($_GET['av'])) {
+    header ("Location: index.php");
+  }
+ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,31 +53,17 @@
   <main>
   <div class="row">
       <div class="col s12 m8 push-m2 z-depth-1" style="background-color: #fff; border-radius: 10px; margin-top: 80px;padding-top: 30px;padding-bottom: 50px; margin-bottom: 50px;padding-left: 40px;padding-right: 40px">
-      <div class="col s12 center"> <h5><b>Contacto</b></h5><h5>¿Te gustaría que te llamemos o prefieres comunicarte por email?</h5></div>
+      <div class="col s12 center"> <h5><b>Activar Cuenta</b></h5><h5>
+        Activa tu cuenta con el siguiente boton.
+      </h5></div>
       <div class="col s12 m6 center" id="telefono">
-        <img src="img/phone-receiver.png">
-        <p>Llamada telefonica</p>
-        <form>
-          <input type="number" name="" placeholder="Telefono">
-          <input type="text" name="" placeholder="Nombre">
-          <textarea id="textarea1" class="materialize-textarea" placeholder="Pregunta..."></textarea>
-          <input type="submit" class="btn" value="Contactar" name="">
-        </form>
+        <p></p>
       </div> 
       <div class="col s12 m6 center" id="correo">
-        <img src="img/mailing.png">
-        <p>Correo electronico</p>
-
-        <form>
-          <input type="email" name="" placeholder="E mail">
-          <input type="text" name="" placeholder="Nombre">
-          <textarea id="textarea1" class="materialize-textarea" placeholder="Pregunta..."></textarea>
-          <input type="submit" class="btn" value="Contactar" name="">
-        </form>
+        <p></p>
       </div> 
       <hr class="col s12">
-      <div class="col s12 center"><h5>También puedes llamarnos directamente al +52 12345678 o escribirnos a contacto@ejemplo.com</h5></div>
-
+      <div class="col s12 center"><h5><a class=" waves-effect waves-light btn-large" id="activar" name="activar">Activar Cuenta</a></div>
 
       </div>
   </div>
@@ -102,8 +93,41 @@
         $('.carousel').carousel();
       });
 
+      $("#activar").on("click", function(e){
+      e.preventDefault();
+      var v = $_GET['v'];
+      var c = $_GET['c'];
+
+      $.ajax({
+        type: 'POST',
+        url: 'ajax/activar.php',
+        data:{
+        'variable':v,
+        'correo':c
+        },
+        success: function(echo){
+          if (echo === 'done') {
+            swal({    
+                  title: "Activacion Exitosa!",
+                  text: "Se ha activado la cuenta inicie sesión para continuar.",   
+                  type: "success",            
+                  closeOnConfirm: false }, 
+                  function(){   
+                    location.href ="login.php"; 
+                  });
+          }else{
+            if (echo === 'existe') {
+              sweetAlert("Error en el registro", "El correo "+ c + "no esta registrado", "error");
+            }else{
+              sweetAlert("Error en la activacion ",echo, "error");
+            }
+          }
+          
+        }
+      });
+    });
+
     </script>
-    <!--End menu-->
 
 
   </body>

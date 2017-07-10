@@ -33,6 +33,10 @@ function agregar() {
           if (respuesta === 'Error') {
             alert("Error");
           }
+        }else{
+          if (respuesta === 'correo') {
+            sweetAlert("Error","No se ha podido enviar el correo","error");
+          }
         }
       }
     }

@@ -45,7 +45,7 @@
     
 <main class="col s12">
   
-  <form accept-charset="utf-8" method="POST" id="registro" enctype="multipart/form-data" autocomplete="off">
+  <form accept-charset="utf-8" method="POST" name="registro" id="registro" enctype="multipart/form-data" autocomplete="off">
           <h5>Agegar Proyecto:</h5>
           <div class="input-field col s12 m6">
             <input placeholder="Nombre" name="nombre" id="nombre" type="text" class="validate" maxlength="50" required="required">
@@ -80,7 +80,7 @@
           <div class="file-field input-field col s12">
             <div class="btn">
               <span>Subir imagenes</span>
-              <input type="file" name="imagen" multiple="multiple" required="required">
+              <input type="file" name="imagen[]" id="imagen[]" multiple="" required="required">
             </div>
             <div class="file-path-wrapper">
               <input class="file-path validate" type="text">
