@@ -72,7 +72,7 @@
 			  <p>Si se ha registrado en la pagina de inversiones</p>
 			  <p>de click en el siguiente enlace para confirmar su correo:</p>
 			  <br>
-			  <a href="https://antxtolentino.000webhostapp.com/activar.php?v=<?php echo $confirmacionH;?>&c=<?php echo $correo;?>"><button class="boton">Confirmar Correo</button></a>
+			  <a href="https://antxtolentino.000webhostapp.com/activar.php?v='.$confirmacionH'&c='.$correo.'"><button class="boton">Confirmar Correo</button></a>
 			  <br>
 			  <br>
 			  <p>De lo contrario ignore este email.</p>
@@ -88,9 +88,10 @@
 			$cabeceras .= 'To:'.$nombre.' <'.$correo.'>' . "\r\n";
 			$cabeceras .= 'From: Activacion <contacto@example.com>' . "\r\n";
 
-	 		$queryAgregar = "INSERT INTO usuario (Nombre,App,Apm,Email,Psw,Tipo,Estado) VALUES ('$nombre','$app','$apm','$correo','$pswH','0','0')";
-	 		$conn->query($queryAgregar);
-	 		if (mail($para, $título, $mensaje, $cabeceras);) {
+	 		$queryAgregar = "INSERT INTO usuario (Nombre,App,Apm,Email,Psw,Tipo,Estado) VALUES ('$nombre','$app','$apm','$correo','$psw','0','0')";
+	 		
+	 		if (mail($para, $título, $mensaje, $cabeceras)) {
+	 			$conn->query($queryAgregar);
 	 			echo "done";
 	 		}else{
 	 			echo "correo";

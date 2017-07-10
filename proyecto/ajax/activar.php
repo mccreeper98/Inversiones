@@ -20,7 +20,7 @@
 	 }
 
 	 if (empty($variable) || empty($confirmacion) || empty($confirmacionH) || empty($correo))  {
-	 	echo "Error";
+	 	echo "Campo vacio";
 	 }else{
 	 	$comp = "";
 	 	try{
@@ -30,20 +30,19 @@
 	 		foreach ($buscarCorreos as $c) {
 	 			if ($correo == $c['Email']) {
 	 				$comp = "si";
-	 				$actualizarEstado = "UPDATE usuario SET Estado = '1' WHERE correo = '$correo'";
-			 		if ($conn->query($actualizarEstado);) {
+	 				$actualizarEstado = "UPDATE usuario SET Estado = '1' WHERE Email = '$correo'";
+			 		if ($conn->query($actualizarEstado)) {
 			 			echo "done";
 			 		}
-			 			
-			 		$conn->exit();
+			 				
 	 			}
 	 		}
-	 		if ($comp != "si") {
+	 		if ($comp != 'si') {
 	 			echo "existe";
 	 		}
 	 		
 	 	}catch (PDOException $e){
-	 		echo "Error";
+	 		echo "pdo";
 	 	}
 	 }
 

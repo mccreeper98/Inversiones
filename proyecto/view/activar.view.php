@@ -1,6 +1,9 @@
 <?php 
-  if (!isset($_GET['av'])) {
+  if (!isset($_GET['v'])) {
     header ("Location: index.php");
+  }else{
+    $v = $_GET['v'];
+    $c = $_GET['c'];
   }
  ?>
 <!DOCTYPE html>
@@ -14,9 +17,11 @@
   <link rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
   <link rel="stylesheet" href="css/master.css">
   <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/sweetalert.css">
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/sweetalert.min.js"> </script>
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -95,8 +100,8 @@
 
       $("#activar").on("click", function(e){
       e.preventDefault();
-      var v = $_GET['v'];
-      var c = $_GET['c'];
+      var v = "<?php echo $v; ?>" ;
+      var c = "<?php echo $c ?>";
 
       $.ajax({
         type: 'POST',

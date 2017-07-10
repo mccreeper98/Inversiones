@@ -32,11 +32,11 @@ function agregar() {
         }else{
           if (respuesta === 'Error') {
             alert("Error");
-          }
-        }else{
+          }else{
           if (respuesta === 'correo') {
             sweetAlert("Error","No se ha podido enviar el correo","error");
           }
+        }
         }
       }
     }
