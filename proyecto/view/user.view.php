@@ -41,13 +41,13 @@
       </div>
     </nav>
 
-    <ul class="slides">
+<ul class="slides">
       <li>
         <!--video src="video/1.webm" autoplay="true" loop="true"></video-->
         <img src="img/1.jpg">
         <div class="centrado textSlide animated zoomIn">
           <h4> <span class="acento">Invierte</span> en acciones inmobiliarias seguras con facilidad.</h4>
-          <center><a href="#" class="waves-effect waves-light btn-large negrobg"><i class="material-icons right">navigate_next
+          <center><a href="proyectos" class="waves-effect waves-light btn-large negrobg"><i class="material-icons right">navigate_next
           </i><b>Comienza a invertir</b></a></center>
         </div>
       </li>
@@ -56,7 +56,7 @@
         <img src="img/2.jpg">
         <div class="centrado textSlide animated fadeIn">
           <h4>No tienes que salir,<span class="acento"> invierte</span> desde tu propio hogar.</h4>
-          <center><a href="#" class="waves-effect waves-light btn-large negrobg"><i class="material-icons right">navigate_next
+          <center><a href="proyectos" class="waves-effect waves-light btn-large negrobg"><i class="material-icons right">navigate_next
           </i><b>Comienza a invertir</b></a></center>
 
         </div>
@@ -66,7 +66,7 @@
         <img src="img/3.jpg">
         <div class="centrado textSlide animated fadeIn">
           <h4>Las inversiones inmobiliarias de una manera <span class="acento">simplificada.</span></h4>
-          <center><a href="#" class="waves-effect waves-light btn-large negrobg"><i class="material-icons right">navigate_next
+          <center><a href="proyectos" class="waves-effect waves-light btn-large negrobg"><i class="material-icons right">navigate_next
           </i><b>Comienza a invertir</b></a></center>
 
         </div>
@@ -76,7 +76,7 @@
         <img src="img/4.jpg">
         <div class="centrado textSlide animated fadeIn">
           <h4><span class="acento">No pierdas tiempo</span> y disfruta mientras tu dinero genera rendimiento.</h4>
-          <center><a href="#" class="waves-effect waves-light btn-large negrobg"><i class="material-icons right">navigate_next
+          <center><a href="proyectos" class="waves-effect waves-light btn-large negrobg"><i class="material-icons right">navigate_next
           </i><b>Comienza a invertir</b></a></center>
 
         </div>
@@ -166,31 +166,8 @@
         </div>
 
       </main>
-      <footer class="page-footer negrobg">
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Footer Content</h5>
-              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Links</h5>
-              <ul>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="footer-copyright">
-          <div class="container">
-            © 2017 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-          </div>
-        </div>
-      </footer>
+
+<?php require 'footer.php'; ?>
 
       <!--Start of Tawk.to Script-->
       <script type="text/javascript">
@@ -226,5 +203,3 @@
 
   </body>
   </html>
-Contact GitHub API Training Shop Blog About
-© 2017 GitHub, Inc. Terms Privacy Security Status Help
