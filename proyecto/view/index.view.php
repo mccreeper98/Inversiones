@@ -12,6 +12,10 @@
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -26,7 +30,7 @@
           <ul class="right hide-on-med-and-down">
             <li><a href="#funciona">¿Cómo funciona?</a></li>
             <li><a href="#invertir">¿Por qué nosotros?</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="proyectos">Proyectos</a></li>
             <li><a href="contacto">Contacto</a></li>
             <li><a href="registra"><span class="registro">Registrate</span></a></li>
             <li><a href="login"><span class="ingresar">Ingresar</span></a></li>
@@ -35,7 +39,7 @@
         <ul class="side-nav" id="mobile-demo">
           <li><a href="#funciona">¿Cómo funciona?</a></li>
           <li><a href="#invertir">¿Por qué nosotros?</a></li>
-          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="proyectos">Proyectos</a></li>
           <li><a href="contacto">Contacto</a></li>
           <li><a href="registra"><span >Registrate</span</a></li>
           <li><a href="login"><span >Ingresar</span></a></li>
@@ -47,7 +51,7 @@
       <li>
         <!--video src="video/1.webm" autoplay="true" loop="true"></video-->
         <img src="img/1.jpg">
-        <div class="centrado textSlide animated zoomIn">
+        <div class="centrado textSlide">
           <h4> <span class="acento">Invierte</span> en acciones inmobiliarias seguras con facilidad.</h4>
           <center><a href="proyectos" class="waves-effect waves-light btn-large negrobg"><i class="material-icons right">navigate_next
           </i><b>Comienza a invertir</b></a></center>
@@ -93,41 +97,54 @@
     });      
   </script>
 
-  <main class="col s12">
-    <div class="row center" id="funciona" style="background-color: #dfdfde">
-
+  <main class="" id="funciona">
+    <div class="parallax-container">
+      <div class="centrado center white-text">
+        <h3>
+          <span>
+            ¿Tienes <b>Dinero</b> destinado <br> 
+            a inversión? <br>
+            <b>Somos tu opción</b>
+            <br>
+            <br>
+            <a href="#" class="waves-effect waves-light btn-large negro wow bounceIn"><i class="material-icons right">navigate_next
+            </i><b>Mira como funciona</b></a>
+          </span>
+        </h3>
+      </div>
+      <div class="parallax"><img src="img/bg.png"></div>
     </div>
 
     <div class="row center" id="invertir">
-      <b><h4 style="padding-top: 50px;padding-bottom: 50px;">¿Por qué invertir con nosotros?</h4></b>
+      <b><h4 style="padding-top: 50px;padding-bottom: 10px;">¿Por qué invertir con nosotros?</h4></b>
       <hr style="width: 80%">
       <div class="container">
-        <div class="col s12 m6 l4 ">
+        <div class="col s12 m6 l4 wow fadeInUp">
           <center><img src="img/coin.png"></center>
           <h5>Asequible</h5>     
           <p class="grey-text">Puedes invertir desde…</p><br>
         </div>
-        <div class="col s12 m6 l4 ">
+        <div class="col s12 m6 l4 wow fadeInUp">
           <center><img src="img/home.png"></center>
           <h5>Fácil</h5>       
           <p class="grey-text">Invierte desde tu casa.</p><br>
         </div>
-        <div class="col s12 m6 l4 ">
+        <div class="col s12 m6 l4 wow fadeInUp">
           <center><img src="img/research.png"></center>
           <h5>Adaptable</h5>
           <p class="grey-text">Revisa nuestros proyectos y elige el mejor para ti.</p>
         </div>
-        <div class="col s12 m6 l4 ">
+        <div class="col s12 m6 l4 wow fadeInUp">
           <center><img src="img/checked.png"></center>
           <h5>Probado</h5>
           <p class="grey-text">Los mejores proyectos seleccionados en nuestro portal.</p>
         </div>
-        <div class="col s12 m6 l4 ">
+        <div class="col s12 m6 l4 wow fadeInUp">
           <center><img src="img/houses.png"></center>
           <h5>Cartera múltiple</h5>
           <p class="grey-text">Con un riesgo disminuido y cartera variada.</p><br>
         </div> 
-        <div class="col s12 m6 l4 ">
+        <div class="col s12 m6 l4 wow fadeInUp">
           <center><img src="img/glass.png"></center>   
           <h5>Visoría constante</h5>   
           <p class="grey-text">Podrás ver el crecimiento de tu dinero y el desarrollo del proyecto desde el portal.</p>
@@ -138,9 +155,10 @@
     <div class="parallax-container white-text">
       <div class="centrado center">
         <h4>¡No esperes más!</h4>
-        <h5>Con tan solo  $<input type="text" placeholder="50,000.00" style="width: 80px; margin-left: 10px; margin-right: 10px" name=""> puedes empezar a invertir en desarrollo inmobiliario.</h5>
+        <h5>Con tan solo  $50,000.00 puedes empezar a invertir en desarrollo inmobiliario.</h5>
         <br>
-        <h5><a href="" class="acento"><strong><u>Comienza a invertir</u></strong></a></h5>
+                    <a href="#" class="waves-effect waves-light btn-large negro wow bounceIn"><i class="material-icons right">navigate_next
+            </i><b>Comienza a invertir</b></a>
       </div>
 
       <div class="parallax"><img src="img/5.jpg"></div>
@@ -157,54 +175,73 @@
 
     <?php require 'view/proyectosIndex.view.php'; ?>
 
-        </div>
+  </div>
 
-        <div class="parallax-container white-text">
-          <div class="centrado center">
-            <h4>Para ti desarrollador inmobiliario</h4>
-            <h5>Nuestro proceso de fondeo inmobiliario está simplificado para que así puedas construir los proyectos que planees, garantizando que el proceso será estándar para permitirnos cerrar la ronda de inversión estructurada de manera eficaz, eficiente y segura para los inversionistas y desarrolladores inmobiliarios.</h5>
-          </div>
-          <div class="parallax"><img src="img/6.jpg"></div>
-        </div>
+  <div class="parallax-container white-text">
+    <div class="centrado center">
+      <h4>Para ti desarrollador inmobiliario</h4>
+      <h5>Nuestro proceso de fondeo inmobiliario está simplificado para que así puedas construir los proyectos que planees, garantizando que el proceso será estándar para permitirnos cerrar la ronda de inversión estructurada de manera eficaz, eficiente y segura para los inversionistas y desarrolladores inmobiliarios.</h5>
+    </div>
+    <div class="parallax"><img src="img/6.jpg"></div>
+  </div>
 
-      </main>
+</main>
 
-      <?php 
-        require 'footer.php';
-       ?>
-      <!--Start of Tawk.to Script-->
-      <script type="text/javascript">
-        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-        (function(){
-          var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-          s1.async=true;
-          s1.src='https://embed.tawk.to/59458844e9c6d324a4735eec/default';
-          s1.charset='UTF-8';
-          s1.setAttribute('crossorigin','*');
-          s0.parentNode.insertBefore(s1,s0);
-        })();
-      </script>
-      <!--End of Tawk.to Script-->
+<?php 
+require 'footer.php';
+?>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+  var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+  (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/59458844e9c6d324a4735eec/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+  })();
+</script>
+<!--End of Tawk.to Script-->
 
-      <!--Start parrallax-->
-      <script type="text/javascript">
-       $(document).ready(function(){
-        $('.parallax').parallax();
-      });
-    </script>
-    <!--End parrallax-->
+<!--Start parrallax-->
+<script type="text/javascript">
+ $(document).ready(function(){
+  $('.parallax').parallax();
+});
+</script>
+<!--End parrallax-->
 
-    <!--Start menu-->
-    <script type="text/javascript">
-      $(".button-collapse").sideNav();
+<!--Start menu-->
+<script type="text/javascript">
+  $(".button-collapse").sideNav();
 
-      $(document).ready(function(){
-        $('.carousel').carousel();
-      });
+  $(document).ready(function(){
+    $('.carousel').carousel();
+  });
 
-    </script>
-    <!--End menu-->
+</script>
+<!--End menu-->
 
 
-  </body>
-  </html>
+<script>
+    /* Smooth scrolling para anclas*/  
+$(document).ready(function() {
+  $('a[href^="#"]').click(function() {
+    var destino = $(this.hash);
+    if (destino.length == 0) {
+      destino = $('a[name="' + this.hash.substr(1) + '"]');
+    }
+    if (destino.length == 0) {
+      destino = $('html');
+    }
+    $('html, body').animate({ scrollTop: destino.offset().top }, 500);
+    return false;
+  });
+});
+
+
+</script>
+
+</body>
+</html>

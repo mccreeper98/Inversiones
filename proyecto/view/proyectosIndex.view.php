@@ -21,7 +21,7 @@
             <p><?php echo $p['Des']?></p>
             </div>
             <div class="card-action">
-            <a href="#">VER MÁS</a>
+                <a class="btn waves-effect waves-light negro col s12 animated" href="proyecto">VER MÁS</a><br><br>
             </div>
           </div>
         </div>

@@ -10,8 +10,8 @@ html, body {
 
 
   main {
-    flex: 1 0 auto;
-  }
+    flex: 1 0 auto; 
+}
 
 .row {
     margin-left: auto;
@@ -104,11 +104,16 @@ hr {
     background-color: #f5cb23;
 }
 #funciona{
-	
+    
 }
 #invertir{
 	padding-bottom: 80px;
 }
+#invertirAhora{
+                                   
+    padding-bottom: 80px;
+}
+
 #invertir img{
 	width: 80px;
     padding-top: 20px;

@@ -148,5 +148,17 @@
     });
     </script>
 
+      <!--Start menu-->
+    <script type="text/javascript">
+      $(".button-collapse").sideNav();
+
+      $(document).ready(function(){
+        $('.carousel').carousel();
+      });
+
+    </script>
+    <!--End menu-->
+
+
 </body>
 </html>

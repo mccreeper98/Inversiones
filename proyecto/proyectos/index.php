@@ -21,7 +21,7 @@
     <nav class="negrobg">
       <div class="nav-wrapper">
         <div class="container">
-          <a href="#" class="brand-logo"><img src="../img/logob.png" height="60px" style="padding-top: 5px"></a>
+          <a href="index" class="brand-logo"><img src="../img/logob.png" height="56px" style="padding-top: 10px"></a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="../#funciona">¿Cómo funciona?</a></li>
@@ -44,7 +44,7 @@
     </nav>
   </div>
 
-  <main style="padding-top: 80px">
+  <main style="padding-top: 80px" class="animated fadeIn">
 
 
     <div class="row">
