@@ -11,7 +11,7 @@ session_start();
     break;
   }
 }else{
-  require 'view/index.view.php';
+  require 'view/login.view.php';
 }
 
 ?>

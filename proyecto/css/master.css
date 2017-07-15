@@ -13,6 +13,11 @@ html, body {
     flex: 1 0 auto; 
 }
 
+.page-footer {
+    padding-top: 20px;
+   background-color: #605f6a;
+}
+
 .row {
     margin-left: auto;
     margin-right: auto;
@@ -117,7 +122,12 @@ hr {
 #invertir img{
 	width: 80px;
     padding-top: 20px;
-    padding-bottom: 50px:;
+    padding-bottom: 50px;
+    transition: .3s;
+}
+#invertir img:hover{
+    transform: rotate(-10deg);
+    transition: .3s;
 }
 #invertir div{
     margin-top: 15px;
@@ -295,4 +305,30 @@ hr {
 
     width: 13%;
     transition: .3s;
+}
+
+#agregar{
+
+    border: #4caf50 solid 2px;
+    border-radius: 50%;
+    margin-right: 19px;
+    font-size: 30px;
+    transition: .3s;
+}
+
+#agregar:hover{
+
+    border: #4caf50 solid 2px;
+    border-radius: 50%;
+    margin-right: 16px;
+    font-size: 36px;
+    transition: .3s;
+}
+
+#edit{
+    font-size: 30px;
+}
+
+#delete{
+ font-size: 30px;
 }

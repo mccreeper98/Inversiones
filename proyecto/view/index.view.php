@@ -6,6 +6,7 @@
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
   <link rel="stylesheet" href="css/master.css">
   <link rel="stylesheet" href="css/animate.css">
@@ -25,7 +26,7 @@
     <nav>
       <div class="nav-wrapper">
         <div class="">
-          <a href="#" class="brand-logo"><img src="img/logob.png" height="80px" style="padding-top: 20px; margin-left: 20px;"></a>
+          <a href="index" class="brand-logo"><img src="img/logob.png" height="80px" style="padding-top: 20px; margin-left: 20px;"></a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="#funciona">¿Cómo funciona?</a></li>
@@ -41,7 +42,7 @@
           <li><a href="#invertir">¿Por qué nosotros?</a></li>
           <li><a href="proyectos">Proyectos</a></li>
           <li><a href="contacto">Contacto</a></li>
-          <li><a href="registra"><span >Registrate</span</a></li>
+          <li><a href="registra"><span >Registrate</span></a></li>
           <li><a href="login"><span >Ingresar</span></a></li>
         </ul>
       </div>
@@ -92,7 +93,7 @@
   <script type="text/javascript">
     $(document).ready(function(){
       $('.slider').slider({
-        indicators: false,
+        indicators: true,
       });
     });      
   </script>

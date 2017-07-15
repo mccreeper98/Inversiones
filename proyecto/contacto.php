@@ -21,7 +21,7 @@
     <nav class="negrobg">
       <div class="nav-wrapper">
         <div class="container">
-          <a href="#" class="brand-logo"><img src="img/logob.png" height="60px" style="padding-top: 5px"></a>
+         <a href="index" class="brand-logo"><img src="img/logob.png" height="56px" style="padding-top: 10px"></a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="index.php">¿Cómo funciona?</a></li>
@@ -45,7 +45,7 @@
   </div>
 
 
-  <main>
+  <main class="animated fadeIn">
   <div class="row">
       <div class="col s12 m8 push-m2 z-depth-3" style="background-color: #fff; margin-top: 80px;padding-top: 30px;padding-bottom: 50px; margin-bottom: 50px;padding-left: 40px;padding-right: 40px">
       <div class="col s12 center"> <h5><b>Contacto</b></h5><h5>¿Te gustaría que te llamemos o prefieres comunicarte por email?</h5></div>

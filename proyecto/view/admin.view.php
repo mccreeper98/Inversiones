@@ -20,22 +20,20 @@
   <div class="slider fullscreen">
     <nav>
       <div class="nav-wrapper">
-        <div class="container">
-          <a href="#" class="brand-logo"><img src="img/logob.png" height="80px" style="padding-top: 20px"></a>
+          <a href="index" class="brand-logo"><img src="img/logob.png" height="80px" style="padding-top: 20px; margin-left: 20px;"></a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
-            <li><a href="registrarP.php">Administrar</a></li>
+            <li><a href="admin">Administrar</a></li>
             <li><a href="proyectos">Proyectos</a></li>
             <li><a href="#">Perfil</a></li>
             <li><a href="3"><span><?php echo $_SESSION['user']; ?></span></a></li>
             <li><a href="cerrar.php"><span class="ingresar">Cerrar Sesión</span></a></li>
           </ul>
-        </div>
         <ul class="side-nav" id="mobile-demo">
-          <li><a href="#funciona">Administrar</a></li>
+          <li><a href="admin">Administrar</a></li>
           <li><a href="#invertir">Proyectos</a></li>
           <li><a href="#proyectos">Perfil</a></li>
-          <li><a href="registra.php"><span ><?php echo $_SESSION['user']; ?></span</a></li>
+          <li><a href="registra.php"><span ><?php echo $_SESSION['user']; ?></span></a></li>
           <li><a href="cerrar.php"><span >Cerrar Sesión</span></a></li>
         </ul>
       </div>
@@ -45,7 +43,7 @@
       <li>
         <!--video src="video/1.webm" autoplay="true" loop="true"></video-->
         <img src="img/1.jpg">
-        <div class="centrado textSlide animated zoomIn">
+        <div class="centrado textSlide">
           <h4> <span class="acento">Invierte</span> en acciones inmobiliarias seguras con facilidad.</h4>
           <center><a href="#" class="waves-effect waves-light btn-large negrobg"><i class="material-icons right">navigate_next
           </i><b>Comienza a invertir</b></a></center>
@@ -86,46 +84,59 @@
   <script type="text/javascript">
     $(document).ready(function(){
       $('.slider').slider({
-        indicators: false,
+        indicators: true,
       });
     });      
   </script>
 
-  <main class="col s12">
-    <div class="row center" id="funciona" style="background-color: #dfdfde">
-
+  <main class="" id="funciona">
+    <div class="parallax-container">
+      <div class="centrado center white-text">
+        <h3>
+          <span>
+            ¿Tienes <b>Dinero</b> destinado <br> 
+            a inversión? <br>
+            <b>Somos tu opción</b>
+            <br>
+            <br>
+            <a href="#" class="waves-effect waves-light btn-large negro wow bounceIn"><i class="material-icons right">navigate_next
+            </i><b>Mira como funciona</b></a>
+          </span>
+        </h3>
+      </div>
+      <div class="parallax"><img src="img/bg.png"></div>
     </div>
 
     <div class="row center" id="invertir">
-      <b><h4 style="padding-top: 50px;padding-bottom: 50px;">¿Por qué invertir con nosotros?</h4></b>
+      <b><h4 style="padding-top: 50px;padding-bottom: 10px;">¿Por qué invertir con nosotros?</h4></b>
       <hr style="width: 80%">
       <div class="container">
-        <div class="col s12 m6 l4 ">
+        <div class="col s12 m6 l4 wow fadeInUp">
           <center><img src="img/coin.png"></center>
           <h5>Asequible</h5>     
           <p class="grey-text">Puedes invertir desde…</p><br>
         </div>
-        <div class="col s12 m6 l4 ">
+        <div class="col s12 m6 l4 wow fadeInUp">
           <center><img src="img/home.png"></center>
           <h5>Fácil</h5>       
           <p class="grey-text">Invierte desde tu casa.</p><br>
         </div>
-        <div class="col s12 m6 l4 ">
+        <div class="col s12 m6 l4 wow fadeInUp">
           <center><img src="img/research.png"></center>
           <h5>Adaptable</h5>
           <p class="grey-text">Revisa nuestros proyectos y elige el mejor para ti.</p>
         </div>
-        <div class="col s12 m6 l4 ">
+        <div class="col s12 m6 l4 wow fadeInUp">
           <center><img src="img/checked.png"></center>
           <h5>Probado</h5>
           <p class="grey-text">Los mejores proyectos seleccionados en nuestro portal.</p>
         </div>
-        <div class="col s12 m6 l4 ">
+        <div class="col s12 m6 l4 wow fadeInUp">
           <center><img src="img/houses.png"></center>
           <h5>Cartera múltiple</h5>
           <p class="grey-text">Con un riesgo disminuido y cartera variada.</p><br>
         </div> 
-        <div class="col s12 m6 l4 ">
+        <div class="col s12 m6 l4 wow fadeInUp">
           <center><img src="img/glass.png"></center>   
           <h5>Visoría constante</h5>   
           <p class="grey-text">Podrás ver el crecimiento de tu dinero y el desarrollo del proyecto desde el portal.</p>
@@ -136,9 +147,10 @@
     <div class="parallax-container white-text">
       <div class="centrado center">
         <h4>¡No esperes más!</h4>
-        <h5>Con tan solo  $___ puedes empezar a invertir en desarrollo inmobiliario.</h5>
+        <h5>Con tan solo  $50,000.00 puedes empezar a invertir en desarrollo inmobiliario.</h5>
         <br>
-        <h5><a href="" class="acento"><strong><u>Comienza a invertir</u></strong></a></h5>
+                    <a href="#" class="waves-effect waves-light btn-large negro wow bounceIn"><i class="material-icons right">navigate_next
+            </i><b>Comienza a invertir</b></a>
       </div>
 
       <div class="parallax"><img src="img/5.jpg"></div>
@@ -155,42 +167,19 @@
 
     <?php require 'view/proyectosIndex.view.php'; ?>
 
-        </div>
+  </div>
 
-        <div class="parallax-container white-text">
-          <div class="centrado center">
-            <h4>Para ti desarrollador inmobiliario</h4>
-            <h5>Nuestro proceso de fondeo inmobiliario está simplificado para que así puedas construir los proyectos que planees, garantizando que el proceso será estándar para permitirnos cerrar la ronda de inversión estructurada de manera eficaz, eficiente y segura para los inversionistas y desarrolladores inmobiliarios.</h5>
-          </div>
-          <div class="parallax"><img src="img/6.jpg"></div>
-        </div>
+  <div class="parallax-container white-text">
+    <div class="centrado center">
+      <h4>Para ti desarrollador inmobiliario</h4>
+      <h5>Nuestro proceso de fondeo inmobiliario está simplificado para que así puedas construir los proyectos que planees, garantizando que el proceso será estándar para permitirnos cerrar la ronda de inversión estructurada de manera eficaz, eficiente y segura para los inversionistas y desarrolladores inmobiliarios.</h5>
+    </div>
+    <div class="parallax"><img src="img/6.jpg"></div>
+  </div>
 
-      </main>
-      <footer class="page-footer negrobg">
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Footer Content</h5>
-              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Links</h5>
-              <ul>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="footer-copyright">
-          <div class="container">
-            © 2017 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-          </div>
-        </div>
-      </footer>
+</main>
+
+      <?php require 'view/footer.view.php'; ?>
 
       <!--Start of Tawk.to Script-->
       <script type="text/javascript">
@@ -224,6 +213,26 @@
 
     </script>
     <!--End menu-->
+
+    <script>
+    /* Smooth scrolling para anclas*/  
+$(document).ready(function() {
+  $('a[href^="#"]').click(function() {
+    var destino = $(this.hash);
+    if (destino.length == 0) {
+      destino = $('a[name="' + this.hash.substr(1) + '"]');
+    }
+    if (destino.length == 0) {
+      destino = $('html');
+    }
+    $('html, body').animate({ scrollTop: destino.offset().top }, 500);
+    return false;
+  });
+});
+
+
+</script>
+
 
 
   </body>

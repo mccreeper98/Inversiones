@@ -27,7 +27,7 @@
             <li><a href="../#funciona">¿Cómo funciona?</a></li>
             <li><a href="../#invertir">¿Por qué nosotros?</a></li>
             <li><a href="../#proyectos">Proyectos</a></li>
-            <li><a href="../contacto.html">Contacto</a></li>
+            <li><a href="../contacto.php">Contacto</a></li>
             <li><a href="../registra.php"><span class="registro">Registrate</span></a></li>
             <li><a href="../login.php"><span class="ingresar">Ingresar</span></a></li>
           </ul>
@@ -36,7 +36,7 @@
           <li><a href="../#funciona">¿Cómo funciona?</a></li>
           <li><a href="../#invertir">¿Por qué nosotros?</a></li>
           <li><a href="../#proyectos">Proyectos</a></li>
-          <li><a href="../contacto.html">Contacto</a></li>
+          <li><a href="../contacto.php">Contacto</a></li>
           <li><a href="../registra.php"><span>Registrate</span></a></li>
           <li><a href="../login.php"><span>Ingresar</span></a></li>
         </ul>
@@ -186,6 +186,25 @@
             })();
           </script>
           <!--End of Tawk.to Script-->
+
+          <script>
+    /* Smooth scrolling para anclas*/  
+$(document).ready(function() {
+  $('a[href^="#"]').click(function() {
+    var destino = $(this.hash);
+    if (destino.length == 0) {
+      destino = $('a[name="' + this.hash.substr(1) + '"]');
+    }
+    if (destino.length == 0) {
+      destino = $('html');
+    }
+    $('html, body').animate({ scrollTop: destino.offset().top }, 500);
+    return false;
+  });
+});
+
+
+</script>
 
         </body>
         </html>
