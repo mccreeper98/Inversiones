@@ -46,7 +46,9 @@
   <main class="animated fadeIn" style="margin-top: 60px">
   <div class="row">
       <div class="container">
-       <caption class="col s12">Proyectos <i class="material-icons right green-text" id="agregar" title="Agregar proyecto">add</i></caption>
+       <caption class="col s12">Proyectos 
+ <a class="" href="#AgregarProyecto"><i class="material-icons right green-text" id="agregar" title="Agregar proyecto">add</i></a>
+       </caption>
         <table class="highlight">
           <thead>
             <tr>
@@ -90,6 +92,63 @@
     </div>
   </div>
 </main>
+
+
+  <!-- Modal Structure -->
+  <div id="AgregarProyecto" class="modal">
+    <div class="modal-content">
+
+ <form accept-charset="utf-8" method="POST" name="registro" id="registro" enctype="multipart/form-data" autocomplete="off">
+          <h5>Agegar Proyecto:</h5>
+          <div class="input-field col s12 m6">
+            <input placeholder="Nombre" name="nombre" id="nombre" type="text" class="validate" maxlength="50" required="required">
+          </div>
+          <input type="number" name="porcentaje" placeholder="Porcentaje" min="0" max="100" required="required" maxlength="3">
+          <div class="input-field col s12 m6">
+            <input placeholder="Monto Requerido" pattern="[0-9,]{1,10}" name="requerido" id="requerido" type="text" class="validate" maxlength="10" required>
+          </div>
+          <div class="input-field col s12 m6">
+            <input placeholder="Inversion Minima" name="inversion" id="inversion" type="text" class="validate" pattern="[0-9,]{1,5}" maxlength="5" required>
+          </div>
+          <div class="input-field col s12 m6">
+            <input placeholder="Tipo de Financiamieto" name="financiamieto" id="financiamieto" type="text" class="validate" maxlength="20" required>
+          </div>
+          <div class="input-field col s12 m6">
+            <input placeholder="Tipo de Proyecto" name="tipo" id="tipo" type="text" class="validate" maxlength="20" required>
+          </div>
+          <div class="input-field col s12 m6">
+            <input placeholder="Sector" name="sector" id="sector" type="text" class="validate" maxlength="20" required>
+          </div>
+          <div class="input-field col s12 m6">
+            <input placeholder="Plazo" name="plazo" id="plazo" type="text" class="validate" maxlength="20" required>
+          </div>
+          <div class="input-field col s12 m6">
+            <input placeholder="Taza Anual" name="taza" type="text" class="validate" maxlength="5" required>
+          </div>
+          <div class="input-field col s12 m6">
+          <label>Descripción</label>
+            <textarea id="descripcion" placeholder="Descripcion" name="descripcion"  class="materialize-textarea" required="required"></textarea>
+          </div>
+          <div class="file-field input-field col s12">
+            <div class="btn">
+              <span>Subir imagenes</span>
+              <input type="file" name="imagen[]" id="imagen[]" multiple="" required="required">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+          <button class="btn waves-effect waves-light right" type="submit" name="action" class="aceptar">Agregar Proyecto
+            <i class="material-icons right">send</i>
+          </button>
+        </form>  
+
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+    </div>
+  </div>
+
 <?php require 'view/footer.view.php'; ?>
 
 <!--Start menu-->
@@ -99,6 +158,12 @@
   $(document).ready(function(){
     $('.carousel').carousel();
   });
+// modaL
+  $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('#AgregarProyecto').modal();
+  });
+
 
 </script>
 <!--End menu-->
