@@ -6,6 +6,7 @@
 	<!--Import Google Icon Font-->
 	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--Import materialize.css-->
+  <link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
 	<link rel="stylesheet" href="../css/master.css">
 	<link rel="stylesheet" href="../css/animate.css">
@@ -13,6 +14,10 @@
 	<script type="text/javascript" src="../js/angular.min.js"></script>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 	<script type="text/javascript" src="../js/materialize.min.js"></script>
+  <script type="text/javascript" src="../js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
 	<!--Let browser know website is optimized for mobile-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -39,7 +44,7 @@
           <li><a href="../#invertir">¿Por qué nosotros?</a></li>
           <li><a href="../#proyectos">Proyectos</a></li>
           <li><a href="../contacto.html">Contacto</a></li>
-          <li><a href="../registra.php"><span >Registrate</span</a></li>
+          <li><a href="../registra.php"><span >Registrate</span></a></li>
           <li><a href="../login.php"><span >Ingresar</span></a></li>
         </ul>
       </div>
@@ -60,7 +65,7 @@
     </div>
     <div class="progress col s12">
       <div class="centradoR" style="z-index: 9"><center><b>20% fondeado</b></center></div>
-      <div class="determinate center negro" style="width: 20%"></div>
+      <div class="determinate center negro animated slideInLeft" style="width: 20%"></div>
     </div>
     <div class="col s12">
 
@@ -158,7 +163,7 @@
             <form ng-app="">
               <input type="number" name="inversion" ng-model="inversion" placeholder="$ 000.000.00">
               <h5>Inversión + rendimiento: {{( inversion + (inversion/100)*20) | currency }}</h5>
-              <button class='btn-large waves-effect waves-light negro col s12 animated bounceIn' type='submit' name='action'>
+              <button class='btn-large waves-effect waves-light negro col s12 wow bounceIn' type='submit' name='action'>
                 <b>Invertir</b>
               </button>
             </form>

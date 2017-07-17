@@ -6,6 +6,7 @@
   <!--Import Google Icon Font-->
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
   <link rel="stylesheet" href="css/master.css">
   <link rel="stylesheet" href="css/animate.css">
@@ -22,7 +23,7 @@
         <img id="logoLogin" class="responsive-img" src="img/logob.png">
       </div>
       <div class="col s12 m7 l6 white-text" style="background-color: #393646; height: 100%">
-        <form action="iniciar.php" method="post" class="col s12 m8 push-m2" style="padding-top: 80px">
+        <form action="iniciar" method="post" class="col s12 m8 push-m2" style="padding-top: 80px">
           <center><h5>Inicia tu sesión</h5></center>
           <br>
           <div class="input-field col s12">

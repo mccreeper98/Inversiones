@@ -37,14 +37,14 @@ if (empty($correo) || empty($psw)) {
 								$_SESSION['tipo'] = '0';
 								$_SESSION['user'] = $passU['Usuario'];
 								$_SESSION['id'] = $passU['idUsr']; 
-								header("Location: index.php");
+								header("Location: misproyectos");
 								die();
 							}
 							elseif ($psw == $passU['Psw'] && $passU['Tipo'] == 1) {
 								session_start();
 								$_SESSION['tipo'] = '1';
 								$_SESSION['user'] = $passU['Usuario'];
-								header("Location: index.php");
+								header("Location: admin");
 								die();
 								}
 								else {
