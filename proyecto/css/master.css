@@ -1,10 +1,15 @@
+@font-face {
+    font-family: Century;
+    src: url('../fonts/CenturyGothicRegular.ttf');
+}
+
 html, body {
 	width: 100%;
 	height: 100%;
 	display: flex;
     min-height: 100vh;
     flex-direction: column;
-	font-family: sans-serif;
+	font-family: Century;
 }
 
 
@@ -54,6 +59,7 @@ nav{
     position: absolute;
     box-shadow: none;
     background-color: transparent;
+    transition: .2s;
 }
 
 hr {
@@ -96,6 +102,26 @@ hr {
 
 .negro{
 	color: #393646;
+}
+
+.navTop{
+    background-color: #393646;
+    transition: .2s;
+}
+
+.logo{
+    padding-top: 20px; 
+    margin-left: 20px;
+    transition: .3s;
+    height: 90px;
+}
+
+.logoTop{
+padding-top: 10px;
+margin-left: 15px;
+height: 54px;
+transition: .3s;
+
 }
 
 .negrobg{
