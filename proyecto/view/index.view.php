@@ -13,41 +13,39 @@
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
-  <script type="text/javascript" src="js/wow.min.js"></script>
-  <script>
-    new WOW().init();
-  </script>
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
 
-  <div class="slider fullscreen">
+  <div id="nav" class="">
     <nav>
       <div class="nav-wrapper">
-        <div class="">
-          <a href="index" class="brand-logo"><img src="img/logob.png" height="80px" style="padding-top: 20px; margin-left: 20px;"></a>
+          <a href="index" class="brand-logo"><img src="img/logob.png" id="logo" class="logo"></a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="#funciona">¿Cómo funciona?</a></li>
             <li><a href="#invertir">¿Por qué nosotros?</a></li>
             <li><a href="proyectos">Proyectos</a></li>
+            <li><a href="FAQ">FAQ</a></li>
             <li><a href="contacto">Contacto</a></li>
             <li><a href="registra"><span class="registro">Registrate</span></a></li>
             <li><a href="login"><span class="ingresar">Ingresar</span></a></li>
           </ul>
-        </div>
         <ul class="side-nav" id="mobile-demo">
           <li><a href="#funciona">¿Cómo funciona?</a></li>
           <li><a href="#invertir">¿Por qué nosotros?</a></li>
           <li><a href="proyectos">Proyectos</a></li>
+          <li><a href="FAQ">FAQ</a></li>
           <li><a href="contacto">Contacto</a></li>
           <li><a href="registra"><span >Registrate</span></a></li>
           <li><a href="login"><span >Ingresar</span></a></li>
         </ul>
       </div>
     </nav>
+  </div>
 
+  <div class="slider fullscreen">
     <ul class="slides">
       <li>
         <!--video src="video/1.webm" autoplay="true" loop="true"></video-->
@@ -90,14 +88,6 @@
       </li>
     </ul>
   </div>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      $('.slider').slider({
-        indicators: true,
-      });
-    });      
-  </script>
-
   <main class="" id="funciona">
     <div class="parallax-container">
       <div class="centrado center white-text">
@@ -240,9 +230,24 @@ $(document).ready(function() {
     return false;
   });
 });
-
-
 </script>
+<script type="text/javascript" src="js/wow.min.js"></script>
+<script type="text/javascript" src="js/home.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.slider').slider({
+        indicators: true,
+      });
+    });      
+  </script>
+  <script>
+    new WOW().init();
+  </script>
+
+<script>
+navEnElTop();
+</script>
+
 
 </body>
 </html>
