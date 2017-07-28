@@ -41,44 +41,6 @@ function agregar() {
       }
     }
   });
-  return false;
-};
-
-function perfil() {
-  var telefono = document.getElementById('telefono').value;
-  var clave = document.getElementById('clave').value;
-  var rfc = document.getElementById('rfc').value;
-  var calle = document.getElementById('calle').value;
-  var ext = document.getElementById('ext').value;
-  var int = document.getElementById('int').value;
-  var colonia = document.getElementById('colonia').value;
-  var cp = document.getElementById('cp').value;
-  var pais = document.getElementById('pais').value;
   
-
-  $.ajax({
-    type: 'POST',
-    url: 'ajax/agregar.php',
-    data:{
-      'correo':correo,
-      'nombre':nombre,
-      'app':app,
-      'apm':apm,
-      'psw':con
-    },
-    success: function(respuesta){
-      if (respuesta === 'done') {
-        swal("Registro Exitoso!","Se a Enviado un correo a: "+correo,"success");
-      }else{
-        if (respuesta === 'existe') {
-          sweetAlert("Error en el registro", "El correo "+ correo + "ya esta registrado", "error");
-        }else{
-          if (respuesta === 'Error') {
-            alert("Error");
-          }
-        }
-      }
-    }
-  });
-  return false;
 };
+

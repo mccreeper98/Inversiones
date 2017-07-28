@@ -4,7 +4,7 @@
   <title>Registro</title>
   <meta charset="utf-8">
   <!--Import Google Icon Font-->
-  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
@@ -24,7 +24,7 @@
   <main class="animated fadeIn">
     <div class="row" style="height: 100vh; margin-bottom: 0px;">
       <div class="col s12 m7 l6 white-text" style="background-color: #393646; height: 100%">
-        <form class="col s12 m10 push-m1" style="padding-top: 40px"method="post" onsubmit="return agregar()" id="registro" autocomplete="off">
+        <form class="col s12 m10 push-m1" style="padding-top: 40px" method="post" onsubmit="return agregar()" id="registro" autocomplete="off">
           <center><h5>Registrate para continuar</h5></center><br>
           <div class="container">
             <input type="email" name="correo"  id="correo" value="" class="col s12" placeholder="Correo"  autocomplete="off" maxlength="30" required>

@@ -7,11 +7,11 @@ if ($_SESSION) {
       break;
 
     case '1':
-      require 'view/admin.view.php';
+      require 'view/panel.view.php';
       break;
     
     default:
-      # code...
+      require 'view/index.view.php';
       break;
   }
 }else{

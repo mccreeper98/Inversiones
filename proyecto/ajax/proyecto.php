@@ -51,70 +51,97 @@ if (empty($nombre)) {
 }elseif (empty($descripcion)) {
 	echo "Es necesaria una descripcion";
 }elseif (isset($nombre) AND isset($porcentaje) AND isset($requerido) AND isset($inversion) AND isset($financiamieto) AND isset($tipo) AND isset($sector) AND isset($plazo) AND isset($taza) AND isset($descripcion)) {
-	
-	if (isset($_FILES['imagen'])) {
-	
-	//Cantidad de imagenes	
-	$cantidad= count($_FILES["imagen"]["tmp_name"]);
 
-	//Extensiones permitidas
-	$extensiones = array('jpg', 'jpeg', 'gif', 'png', 'bmp');
+	try {
+
+	//conmprobamos si existe el areglo de imagenes
+    if(isset($_FILES['file_array'])){
+
+   	//almacenamos las propiedades de las imagenes
+    $name_array     = $_FILES['file_array']['name'];
+    $tmp_name_array = $_FILES['file_array']['tmp_name'];
+    $size_array     = $_FILES['file_array']['size'];
+    $error_array    = $_FILES['file_array']['error'];
+
+	}else{
+		echo "No se ha elegido ninguna imagen";
+	}//fin existe archivo
+
+	$cantidad = count($tmp_name_array);
+
+	for($x = 0; $x < $cantidad; $x++){
+
+    // errores de $_FILES.
+    switch ($error_array[$x]) {
+        case UPLOAD_ERR_OK:
+            break;
+        case UPLOAD_ERR_NO_FILE:
+            throw new RuntimeException('No se ha seleccionado una imagen.');
+        case UPLOAD_ERR_INI_SIZE:
+        case UPLOAD_ERR_FORM_SIZE:
+            throw new RuntimeException('Imagen demasiado grande.');
+        default:
+            throw new RuntimeException('Error desconocido a subir las imagenes.');
+    }//fin errores de archivo
+
+    // Se verifica el tamaño de las imagenes. 
+    if ($size_array[$x] > 2000000) {
+        throw new RuntimeException('se excedio el tamaño maximo de imagen.');
+    }//fin condicion tamaño
+
+    // Se verifica que los archivos sean imagenes.
+    $finfo = new finfo(FILEINFO_MIME_TYPE);
+    if (false === $ext = array_search(
+        $finfo->file($tmp_name_array[$x]),
+        array(
+            'jpg' => 'image/jpeg',
+            'png' => 'image/png',
+            'gif' => 'image/gif',
+        ),
+        true
+    )) {
+        throw new RuntimeException('Formato de imagen no valido.');
+    }//fin condicion tipo de archivo
+	}//fin del for validacion de imagenes
 
 	//Insercion de los datos
 	$subirDatos = "INSERT INTO proyecto (Por, Nombre, Req, Inv, Fina, Tip, Sector, Plazo, Taza, Des) VALUES ('$porcentaje', '$nombre', '$requerido', '$inversion', '$financiamieto', 'tipo', 'sector', 'plazo','$taza', '$descripcion')";
 	if ($conn->query($subirDatos)) {
-		$last_id = $conn->lastInsertId();
-		echo $cantidad;
-	/*	
-	for ($i=0; $i<$cantidad; $i++){
+		$idproy = $conn->lastInsertId();
+		$path = "../proyectos/img/";
+		
+		//recorremos el array de imagenes para subirlas al simultaneo
+    for($i = 0; $i < $cantidad; $i++){
+        if(move_uploaded_file($tmp_name_array[$i],$path.$name_array[$i])){
+
+            //guardamos en la base de datos el nombre
+            $upload = "INSERT INTO images (idProy, img) VALUES
+             ($idproy,'$name_array[$i]')";
+            if($conn -> query($upload)){
+
+            	if ($i == $cantidad) {
+            		echo "done";
+            	}
+
+	        }else{
+            //si ocurre algún problema al subir el archivo 
+            echo "Error al subir el archivo ".$name_array[$i]." a la base de datos";
+        	}
+    	}else{
+			echo "Error al mover el archivo ".$name_array[$i]."";
+    	}
+	}
 	
-	if ($_FILES["imagen"]['error'][$i] === 0) {
-		//Comvertimos las imagenes a binarias	
-		$imagenBinaria = addslashes(file_get_contents($_FILES['imagen']['tmp_name'][$i]));
-
-		$nombreArchivo = $_FILES['imagen']['name'][$i];
-
-		//Obtenemos la extensino para poder comparar
-		$extebsionimg = strtolower(end(explode('.', $nombreArchivo)));
-		//Verificamos que sea una extension permitida, si no lo es mostramos un mensaje de error
-		if (!in_array($extebsionimg, $extennsiones)) {
-			echo "Solo se permiten archivos con las siguientes extensiones : ".implode(',', $extennsiones)."";
-		}else{
-			//Si la extensión es correcta, procedemos a comprobar el tamaño del archivo subido
-		//Y definimos el máximo que se puede subir
-		//Por defecto el máximo es de 2 MB, pero se puede aumentar desde el .htaccess o en la directiva 'upload_max_filesize' en el php.ini
-			$tamañoArchivo = $_FILES['imagen']['size'][$i];//obtenemos el tamaño del archivo en Bytes
-			$tamañoArchivoKB = round(intval(strval($tamañoArchivo/ 1024)));//Pasamos el tamaño del archivo a KB
-			$tamañoMaximoKB = "2048";//Tamño maximo expresado en KB
-			$tamañoMaximoBytes = $tamañoMaximoKB * 1024; // ->2097152 Bytes - 2MB
-
-			//Comprobamos el tamaño del archivo, y mostramos un mensaje si es mayor al tamao expresado en Bytes
-			if ($tamañoArchivo > $tamañoMaximoBytes) {
-				echo "El archivo ".$nombreArchivo." es demasiado grande. El tamaño maximo de archivo es de ".$tamañoMaximoKB."Kb.";
-			}else{
-				//Si el tamaño es correcto, subimos los datos
-				$subirImg = "INSERT INTO images (idProy, img) VALUES ('$last_id','$imagenBinaria')";
-				if ($conn->query($subirImg)) {
-					if ($cantidad === $i) {
-						echo "done";
-					}
-				}else{
-					echo "Error al subir imagen";
-				}
-
-			}//Fin condicional tamaño
-
-		}//Fin condicional extennsiones
-	}//Fin error img
-	
-	}//Fin for*/
 	}else{
 		echo "Parece que ha habido un error Recargue la página e intentelo nuevamente.";
 	}//Fin InsertDatos
-	}else{
-		echo "Seleccione una imagen.";
-	}
+
+	} catch (RuntimeException $e) {
+
+		echo $e->getMessage();
+
+	}//fin try catch
 
 }//Fin condicional para saber si todos los campos estan completos
 
-?>
+ ?>

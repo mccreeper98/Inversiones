@@ -3,7 +3,7 @@
   try{
   require 'conn.php';
 
-  $queryProyect = "SELECT proyecto.Nombre,proyecto.Des,images.img FROM proyecto INNER JOIN images ON proyecto.Nombre = images.proyecto";
+  $queryProyect = "SELECT proyecto.Nombre,proyecto.Des,images.img FROM proyecto INNER JOIN images ON proyecto.idProy = images.idProy";
   $proyect = $conn->query($queryProyect);
 
   foreach ($proyect as $p ) {

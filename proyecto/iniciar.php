@@ -1,4 +1,4 @@
-<?php
+	<?php
 
 if (isset($_POST['correo']) || isset($_POST['psw'])) {
 
@@ -6,7 +6,7 @@ if (isset($_POST['correo']) || isset($_POST['psw'])) {
 	$psw = $_POST['psw'];
 	$sgrdd = "SHA256";
 	//$pswH = hash($sgrdd, $psw);
-	$queryUsuario = "SELECT Email FROM usuario";
+	$queryUsuario = "SELECT Email,Estado FROM usuario";
 	$queryPsw = "SELECT idUsr,Psw,Usuario,Tipo FROM usuario WHERE Email='$correo'"; 
 
 } else {
@@ -27,7 +27,7 @@ if (empty($correo) || empty($psw)) {
 		require 'conn.php';
 		$buscarUsuario = $conn->query($queryUsuario);
 			foreach ($buscarUsuario as $usuario) {
-					if ($correo == $usuario['Email']) {
+					if ($correo == $usuario['Email'] && $usuario['Estado'] == 1) {
 						//echo "Correo encontrado <br>";
 						$buscarPass = $conn->query($queryPsw);
 						foreach ($buscarPass as $passU) {
@@ -37,7 +37,7 @@ if (empty($correo) || empty($psw)) {
 								$_SESSION['tipo'] = '0';
 								$_SESSION['user'] = $passU['Usuario'];
 								$_SESSION['id'] = $passU['idUsr']; 
-								header("Location: misproyectos");
+								header("Location: index");
 								die();
 							}
 							elseif ($psw == $passU['Psw'] && $passU['Tipo'] == 1) {
@@ -52,6 +52,11 @@ if (empty($correo) || empty($psw)) {
 								die();
 								}
 							}
+						}else{
+							if ($usuario['Estado']==0) {
+								echo "La cuenta debe de ser avtivada";
+								die();
+							}
 						}
 					}
 				
@@ -63,3 +68,4 @@ if (empty($correo) || empty($psw)) {
 }
 
 ?>
+

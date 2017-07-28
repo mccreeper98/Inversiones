@@ -4,7 +4,7 @@
 	<title>Invertir</title>
  <meta charset="utf-8">
  <!--Import Google Icon Font-->
- <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
  <!--Import materialize.css-->
  <link rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
  <link rel="stylesheet" href="../css/master.css">
@@ -21,7 +21,7 @@
     <nav class="negrobg">
       <div class="nav-wrapper">
         <div class="container">
-          <a href="index" class="brand-logo"><img src="../img/logob.png" height="56px" style="padding-top: 10px"></a>
+          <a href="../index" class="brand-logo"><img src="../img/logob.png" height="56px" style="padding-top: 10px"></a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="../#funciona">¿Cómo funciona?</a></li>
