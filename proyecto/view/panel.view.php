@@ -44,11 +44,11 @@
     </nav>
   </div>
 
-  <main class="animated fadeIn" style="margin-top: 100px">
+  <main class="animated fadeIn" style="margin-top: 10px">
   <div class="row">
       <div class="container">
        <caption class="col s12"><h4 class="thin">Proyectos</h4> 
- <a class="" href="#AgregarProyecto"><i class="material-icons right green-text" id="agregar" title="Agregar proyecto">add</i></a>
+          <a class="" href="#AgregarProyecto"><i class="material-icons right green-text" id="agregar" title="Agregar proyecto">add</i></a>
        </caption>
        <div id="loader" class="center"> <img src="img/loader.gif"></div>
     <div class="datos_ajax_delete"></div><!-- Datos ajax Final -->
@@ -59,11 +59,8 @@
 
 
   <?php require 'agregarP.view.php'; ?>
-  <?php require 'agregarP.view.php'; ?>
-  <?php require 'deleteP.view.php'; ?>
 
-
-<?php require 'view/footer.view.php'; ?>
+<!--?php require 'view/footer.view.php'; ?-->
 
 <!--Start menu-->
 <script type="text/javascript">
@@ -72,6 +69,7 @@
   $(document).ready(function(){
     $('.carousel').carousel();
   });
+
 </script>
 <script src="js/admin.js"></script>
 <script>

@@ -5,7 +5,7 @@
  <form accept-charset="utf-8" method="POST" name="editar" id="editar" enctype="multipart/form-data" autocomplete="off">
           <h5>Editar Proyecto:</h5>
           <div class="input-field col s12 m6">
-            <input placeholder="<?php echo $identificador; ?>" name="nombre" id="nombre" type="text" class="validate" maxlength="50" required="required" value="">
+            <input name="nombre" id="nombre" type="text" class="validate" maxlength="50" required="required" value="">
           </div>
           <input type="number" name="porcentaje" placeholder="Porcentaje" min="0" max="100" required="required" maxlength="3">
           <div class="input-field col s12 m6">

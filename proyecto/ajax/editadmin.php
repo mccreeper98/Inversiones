@@ -48,9 +48,10 @@
               <td><?php echo $p['Estatus']; ?></td> 
               <td>  
                 <div class="col s12" title="Editar">
-                <a class="" href="editarp.php?id='<?php echo $p['idProy']?>'"><i class="material-icons orange-text" title="Editar proyecto" id="edit" name="Editar">mode_edit</i></a></div> 
+                <a class="" id="edit"  href="#EditarProyecto"  data-nombre="<?php $p['Nombre']?>"
+                 data-id="<?php echo $p['idProy']?>"><i class="material-icons orange-text" title="Editar proyecto" name="Editar">mode_edit</i></a></div> 
                 <div class="col s12" title="Borrar">
-                <a class="" href="#"><i class="material-icons red-text" id="delete" data-id="<?php echo $p['idProy']?>" data-nom="<?php echo $p['Nombre']?>">delete_forever</i></a></div>  
+                <a class="btnborrar" href="#AgregarProyecto" data-id = "<?php  echo $p['idProy']; ?>"><i class="material-icons red-text" id="delete">delete_forever</i></a></div>  
               </td> 
             </tr> 
             <?php } ?> 

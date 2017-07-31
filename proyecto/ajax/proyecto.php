@@ -28,7 +28,6 @@ $sector = str_replace($caracteres_malos,$caracteres_buenos ,$sector);
 $plazo = str_replace($caracteres_malos,$caracteres_buenos ,$plazo);
 $taza = str_replace($caracteres_malos,$caracteres_buenos ,$taza);
 $descripcion = str_replace($caracteres_malos,$caracteres_buenos ,$descripcion);
-$descripcion = nl2br($descripcion);
 
 if (empty($nombre)) {
 	echo "Es necesario un nombre";
