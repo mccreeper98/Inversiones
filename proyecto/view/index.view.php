@@ -45,7 +45,7 @@
     </nav>
   </div>
 
-  <div class="slider fullscreen">
+  <div class="slider">
     <ul class="slides">
       <li>
         <!--video src="video/1.webm" autoplay="true" loop="true"></video-->
@@ -88,6 +88,7 @@
       </li>
     </ul>
   </div>
+
   <main class="" id="funciona">
     <div class="parallax-container">
       <div class="centrado center white-text">
@@ -108,7 +109,7 @@
 
     <div class="row center" id="invertir">
       <b><h4 style="padding-top: 50px;padding-bottom: 10px;">¿Por qué invertir con nosotros?</h4></b>
-      <hr style="width: 80%">
+      <hr style="width: 80%; ">
       <div class="container">
         <div class="col s12 m6 l4 wow fadeInUp">
           <center><img src="img/coin.png"></center>
@@ -234,9 +235,12 @@ $(document).ready(function() {
 <script type="text/javascript" src="js/wow.min.js"></script>
 <script type="text/javascript" src="js/home.js"></script>
   <script type="text/javascript">
+
     $(document).ready(function(){
+      var alto = $("body").height();
       $('.slider').slider({
         indicators: true,
+        'height': alto
       });
     });      
   </script>

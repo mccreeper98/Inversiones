@@ -7,19 +7,19 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--Import materialize.css-->
   <link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
-	<link rel="stylesheet" href="../css/master.css">
-	<link rel="stylesheet" href="../css/animate.css">
-	<!--Import jQuery before materialize.js-->
-	<script type="text/javascript" src="../js/angular.min.js"></script>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript" src="../js/materialize.min.js"></script>
+  <link rel="stylesheet" href="../css/materialize.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="../css/master.css">
+  <link rel="stylesheet" href="../css/animate.css">
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="../js/angular.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="../js/materialize.min.js"></script>
   <script type="text/javascript" src="../js/wow.min.js"></script>
   <script>
     new WOW().init();
   </script>
-	<!--Let browser know website is optimized for mobile-->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
 
@@ -63,10 +63,23 @@
       <a class="carousel-item" href="#four!"><img src="../img/d.jpg"></a>
       <a class="carousel-item" href="#five!"><img src="../img/e.jpg"></a>
     </div>
+
+    <div class="col s12" style="font-size: 18px">
+      <div class="container">
+        <span class="left acento"><b>$ 200,000.00</b></span>
+        <span class="right acento"><b>$ 1,000,000.00</b></span>
+      </div>
+    </div>
+
     <div class="progress col s12">
       <div class="centradoR" style="z-index: 9"><center><b>20% fondeado</b></center></div>
       <div class="determinate center negro animated slideInLeft" style="width: 20%"></div>
     </div>
+
+    <div class="col s12 center" style="font-size: 18px">
+      <b class="acento">Quedan 15 participaciones de 51</b>
+    </div>
+
     <div class="col s12" id="numeros">
 
 
@@ -114,8 +127,8 @@
 
     </div>
 
-      <iframe width="100%" height="480" src="https://www.youtube.com/embed/mleCn7QVxhs?controls=0&autoplay=1&rel=0&showinfo=0&mute=1" frameborder="0" id="video" allowfullscreen>
-      </iframe>
+    <iframe width="100%" height="480" src="https://www.youtube.com/embed/mleCn7QVxhs?controls=0&autoplay=1&rel=0&showinfo=0&mute=1" frameborder="0" id="video" allowfullscreen>
+    </iframe>
 
     <div class="col s12 white-text center" style="background-color: #605f6a " id="descripcion">
       <div class="container">
@@ -178,7 +191,7 @@
             <a href="http://www.hgd1952.hr/pdf_datoteke/Test_document_PDF.pdf" class="white-text" download>
               <div class="col s12 "><img src="../img/pdf.png" class="resposive-img pdf" ></div>
               <div class="col s12 ">
-              <h5>Descargar detalles del proyecto</h5>
+                <h5>Descargar detalles del proyecto</h5>
               </div>
             </a>
           </div>

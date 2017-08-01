@@ -79,6 +79,66 @@
               <img src="../img/example2.jpg">
               <span class="card-title">Card Title</span>
             </div>
+            <div class="col s12" style="font-size: 16px; padding-top: 10px;">
+              <span class="left acento"><b>$ 200,000.00</b></span>
+              <span class="right acento"><b>$ 1,000,000.00</b></span>
+            </div>
+            <div class="progress col s12" style="height: 20px">
+              <div class="determinate center negro animated slideInLeft" style="width: 20%"></div>
+            </div>
+            <div class="col s12 center" style="font-size: 16px;">
+              <b class="acento">Quedan 15 participaciones de 51</b>
+            </div>
+            <div class="card-content center" style="height: 290px">
+              <div class="col s4">
+                <i class="material-icons center negro" style="font-size: 70px">local_atm</i>
+                <span>Inversión minima<br> <b>$100,000</b></span>
+              </div> 
+              <div class="col s4">
+                <i class="material-icons center negro" style="font-size: 70px">query_builder</i>
+                <span>Plazo estimado<br> <b>20 MESES</b></span>
+              </div>
+              <div class="col s4">
+                <i class="material-icons center negro" style="font-size: 70px">trending_up</i>
+                <span>Rendimiento estimado <br> <b> 38.6 %</b></span> 
+              </div>
+            </div>
+            <div class="card-action" style="height: 67">
+              <a class="btn waves-effect waves-light negro" style="width: 100%" href="proyecto">VER MÁS</a>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="../img/example3.jpg">
+              <span class="card-title">Card Title</span>
+            </div>
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                <a class="btn waves-effect waves-light negro col s12 animated" href="proyecto">VER MÁS</a><br><br>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 amarillobg center" style="margin-bottom: 35px">
+         <h4 class="white-text"><b>Casos de éxito</b></h4>
+       </div>
+
+       <div class="container">
+        <div class="col s12 m4">
+          <div class="card">
+            <div class="card-image">
+              <img src="../img/example4.jpg">
+              <span class="card-title">Card Title</span>
+            </div>
             <div class="card-content">
               <p>I am a very simple card. I am good at containing small bits of information.
                 I am convenient because I require little markup to use effectively.</p>
@@ -89,10 +149,12 @@
             </div>
           </div>
 
+
+
           <div class="col s12 m4">
             <div class="card">
               <div class="card-image">
-                <img src="../img/example3.jpg">
+                <img src="../img/example5.jpg">
                 <span class="card-title">Card Title</span>
               </div>
               <div class="card-content">
@@ -104,35 +166,11 @@
                 </div>
               </div>
             </div>
-          </div>
-
-          <div class="col s12 amarillobg center" style="margin-bottom: 35px">
-           <h4 class="white-text"><b>Proyectos terminados</b></h4>
-         </div>
-
-         <div class="container">
-          <div class="col s12 m4">
-            <div class="card">
-              <div class="card-image">
-                <img src="../img/example4.jpg">
-                <span class="card-title">Card Title</span>
-              </div>
-              <div class="card-content">
-                <p>I am a very simple card. I am good at containing small bits of information.
-                  I am convenient because I require little markup to use effectively.</p>
-                </div>
-                <div class="card-action">
-                  <a class="btn waves-effect waves-light negro col s12 animated" href="proyecto">VER MÁS</a><br><br>
-                </div>
-              </div>
-            </div>
-
-
 
             <div class="col s12 m4">
               <div class="card">
                 <div class="card-image">
-                  <img src="../img/example5.jpg">
+                  <img src="../img/example6.jpg">
                   <span class="card-title">Card Title</span>
                 </div>
                 <div class="card-content">
@@ -143,68 +181,52 @@
                     <a class="btn waves-effect waves-light negro col s12 animated" href="proyecto">VER MÁS</a><br><br>
                   </div>
                 </div>
-              </div>
-
-              <div class="col s12 m4">
-                <div class="card">
-                  <div class="card-image">
-                    <img src="../img/example6.jpg">
-                    <span class="card-title">Card Title</span>
-                  </div>
-                  <div class="card-content">
-                    <p>I am a very simple card. I am good at containing small bits of information.
-                      I am convenient because I require little markup to use effectively.</p>
-                    </div>
-                    <div class="card-action">
-                      <a class="btn waves-effect waves-light negro col s12 animated" href="proyecto">VER MÁS</a><br><br>
-                    </div>
-                  </div>
-                </div> 
-              </div>
-
+              </div> 
             </div>
-          </main>
 
-          <?php require 'footer.php'; ?> 
+          </div>
+        </main>
 
-          <!--Start menu-->
-          <script type="text/javascript">
-            $(".button-collapse").sideNav();
-          </script>
-          <!--End menu-->
+        <?php require 'footer.php'; ?> 
 
-          <!--Start of Tawk.to Script-->
-          <script type="text/javascript">
-            var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-            (function(){
-              var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-              s1.async=true;
-              s1.src='https://embed.tawk.to/59458844e9c6d324a4735eec/default';
-              s1.charset='UTF-8';
-              s1.setAttribute('crossorigin','*');
-              s0.parentNode.insertBefore(s1,s0);
-            })();
-          </script>
-          <!--End of Tawk.to Script-->
+        <!--Start menu-->
+        <script type="text/javascript">
+          $(".button-collapse").sideNav();
+        </script>
+        <!--End menu-->
 
-          <script>
-    /* Smooth scrolling para anclas*/  
-$(document).ready(function() {
-  $('a[href^="#"]').click(function() {
-    var destino = $(this.hash);
-    if (destino.length == 0) {
-      destino = $('a[name="' + this.hash.substr(1) + '"]');
-    }
-    if (destino.length == 0) {
-      destino = $('html');
-    }
-    $('html, body').animate({ scrollTop: destino.offset().top }, 500);
-    return false;
-  });
-});
+        <!--Start of Tawk.to Script-->
+        <script type="text/javascript">
+          var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+          (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/59458844e9c6d324a4735eec/default';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+          })();
+        </script>
+        <!--End of Tawk.to Script-->
+
+        <script>
+          /* Smooth scrolling para anclas*/  
+          $(document).ready(function() {
+            $('a[href^="#"]').click(function() {
+              var destino = $(this.hash);
+              if (destino.length == 0) {
+                destino = $('a[name="' + this.hash.substr(1) + '"]');
+              }
+              if (destino.length == 0) {
+                destino = $('html');
+              }
+              $('html, body').animate({ scrollTop: destino.offset().top }, 500);
+              return false;
+            });
+          });
 
 
-</script>
+        </script>
 
-        </body>
-        </html>
+      </body>
+      </html>
