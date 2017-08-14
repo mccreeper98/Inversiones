@@ -89,22 +89,139 @@
     </ul>
   </div>
 
-  <main class="" id="funciona">
-    <div class="parallax-container">
-      <div class="centrado center white-text">
-        <h3>
-          <span>
-            ¿Tienes <b>Dinero</b> destinado <br> 
-            a inversión? <br>
-            <b>Somos tu opción</b>
-            <br>
-            <br>
-            <a href="#" class="waves-effect waves-light btn-large negro wow bounceIn"><i class="material-icons right">navigate_next
-            </i><b>Mira como funciona</b></a>
-          </span>
-        </h3>
+  <main class="">
+
+    <div id="funciona">
+      <div class="row center">
+        <div class="container">
+        <h4>¿Cómo valuamos los proyectos?</h4>
+        <h5>Valuamos cada proyecto en 3 grandes indicadores</h5>
+        <br><br><br>
+
+      <div class="col s12 m4 indicador">
+        <div class="card hoverable" style="background: #f5f5f5;">
+          <div class="card-content black-text" style="height: 330px">
+            <center><img src="img/gold-medal.png" alt="" class="wow flipInX"></center>
+            <span class="card-title">Valuación del proyecto</span>
+            <p>Análisis de la zona, permisos, escrituras, viabilidad financiera, 
+            tamaño del proyecto, estudio de mercado y todo lo relacionado al desarrollo a participar.</p>
+          </div>
+        </div>
       </div>
-      <div class="parallax"><img src="img/bg.png"></div>
+
+      <div class="col s12 m4 indicador">
+        <div class="card hoverable" style="background: #f5f5f5;">
+          <div class="card-content black-text" style="height: 330px">
+          <center><img src="img/silver-medal.png" alt="" class="wow flipInX"></center>
+            <span class="card-title">Valuación del desarrollador</span>
+            <p>
+            Historial, obras realizadas, referencias, experiencia, situación financiera y 
+            todo lo relacionado con el desarrollador.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4  indicador">
+        <div class="card hoverable" style="background: #f5f5f5;">
+          <div class="card-content black-text" style="height: 330px">
+          <center><img src="img/bronze-medal.png" alt="" class="wow flipInX"></center>
+            <span class="card-title">Negociación y estructura legal</span>
+            <p>Amarramos la operación con contratos y cláusulas que protejan 
+            la participación en todo momento.</p>
+          </div>
+        </div>
+      </div>
+
+      <h4 class="col s12" style="padding-top: 50px; padding-bottom: 50px;">¿Cómo participar en los proyectos?</h4>
+
+
+      <div class="col s12 m4 indicador">
+        <div class="card hoverable" style="border: solid 1px #6cfe6b;">
+        <div class="shape"><div class="shape-text">1</div></div>          
+          <div class="card-content black-text" style="height: 250px">
+            <span class="card-title">1. Analiza</span>
+            <p>Análisis de la zona, permisos, escrituras, viabilidad financiera, 
+            tamaño del proyecto, estudio de mercado y todo lo relacionado al desarrollo a participar.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4 indicador">
+        <div class="card hoverable" style="border: solid 1px #6cfe6b;">
+        <div class="shape "><div class="shape-text">2</div></div>          
+          <div class="card-content black-text" style="height: 250px">
+            <span class="card-title">2. Tú eliges</span>
+            <p>
+            Historial, obras realizadas, referencias, experiencia, situación financiera y 
+            todo lo relacionado con el desarrollador.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4  indicador">
+        <div class="card hoverable" style="border: solid 1px #6cfe6b;">
+        <div class="shape"><div class="shape-text">3</div></div>          
+          <div class="card-content black-text" style="height: 250px">
+            <span class="card-title">3. Aparta tu lugar</span>
+            <p>Amarramos la operación con contratos y cláusulas que protejan 
+            la participación en todo momento.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col s12 m3  indicador">
+        <div class="card hoverable" style="border: solid 1px #6cfe6b;">
+        <div class="shape"><div class="shape-text">4</div></div>          
+          <div class="card-content black-text" style="height: 330px">
+            <span class="card-title">4. Llena la solicitud de participación</span>
+            <p>Si es tu primera participación con nosotros, 
+            llena la solicitud, que aparecerá después de apartar tu lugar en un proyecto.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m3  indicador">
+        <div class="card hoverable" style="border: solid 1px #6cfe6b;">
+        <div class="shape"><div class="shape-text">5</div></div>          
+          <div class="card-content black-text" style="height: 330px">
+            <span class="card-title">5. Recibe tus contratos</span>
+            <p>Recibe los contratos que amparan tu participación en la dirección de tu conveniencia, 
+              tenemos entrega en toda la república.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m3  indicador">
+        <div class="card hoverable" style="border: solid 1px #6cfe6b;">
+        <div class="shape"><div class="shape-text">6</div></div>          
+          <div class="card-content black-text" style="height: 330px">
+            <span class="card-title">6. Participa</span>
+            <p>Una vez que estén firmados los contratos, 
+              realiza tus aportaciones vía transferencia bancaria.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m3  indicador">
+        <div class="card hoverable" style="border: solid 1px #393646;">
+        <div class="shapeG"><div class="shape-text">7</div></div>
+          <div class="card-content black-text" style="height: 330px">
+            <span class="card-title">7. ¡Ve crecer tu dinero!</span>
+            <p>¡Una vez concluido el desarrollo, recibirás tu capital más utilidad!
+            </p>
+          </div>
+        </div>
+      </div>
+
+
+
+        </div>
+      </div>
     </div>
 
     <div class="row center" id="invertir">

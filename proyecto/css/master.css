@@ -136,8 +136,10 @@ transition: .3s;
 }
 #funciona{
     
+   padding-top: 100px; 
 }
 #invertir{
+    padding-top: 20px;
 	padding-bottom: 80px;
 }
 #invertirAhora{
@@ -207,6 +209,59 @@ transition: .3s;
     background-position-x: 50%;
     background-position-y: 50%;
     background-size: cover;
+}
+
+.indicador .card-title:hover {
+ color: #6cfe6b;
+} 
+
+.shape {
+    border-color: rgba(255,255,255,0) #6cfe6b rgba(255,255,255,0) rgba(255,255,255,0);
+}
+
+.shapeG {
+    border-color: rgba(255,255,255,0) #393646 rgba(255,255,255,0) rgba(255,255,255,0);
+}
+.shapeG {
+    border-style: solid;
+    border-width: 0px 68px 40px 0;
+    float: right;
+    height: 0px;
+    width: 0px;
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+.shape {
+    border-style: solid;
+    border-width: 0px 68px 40px 0;
+    float: right;
+    height: 0px;
+    width: 0px;
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+.shape-text {
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    right: -40px;
+    top: 2px;
+    white-space: nowrap;
+    -ms-transform: rotate(30deg);
+    -o-transform: rotate(360deg);
+    -webkit-transform: rotate(30deg);
+    transform: rotate(30deg);
+}
+
+.exito {
+    -webkit-filter: grayscale(80%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(80%);
 }
 
 #proyectos{

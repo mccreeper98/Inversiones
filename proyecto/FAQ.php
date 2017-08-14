@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Contacto</title>
+  <title>FAQ</title>
   <meta charset="utf-8">
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -15,7 +15,7 @@
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-<body id="contacto">
+<body id="FAQ">
     
   <div class="navbar-fixed">
     <nav class="negrobg">
@@ -47,51 +47,34 @@
 
   <main class="animated fadeIn">
   <div class="row">
-      <div class="col s12 m8 push-m2 z-depth-3" style="background-color: #fff; margin-top: 80px;padding-top: 30px;padding-bottom: 50px; margin-bottom: 50px;padding-left: 40px;padding-right: 40px">
-      <div class="col s12 center"> <h5><b>Contacto</b></h5><h5>¿Te gustaría que te llamemos para más información o preferies programar una visita al desarrollo?</h5></div>
-      <div class="col s12 m6 center" id="telefono">
-        <img src="img/phone-receiver.png">
-        <p>Llamada telefonica</p>
-        <form name="llamada">
-          <input type="text" name="" placeholder="Nombre" required="required">
-          <input type="email" name="" placeholder="E mail" required="required">
-          <input type="number" name="" placeholder="Telefono" required="required">          
-          <textarea id="comentario" class="materialize-textarea" placeholder="Comentarios..." require></textarea>
-          <input type="submit" class="btn" value="Enviar" name="">
-        </form>
-      </div> 
-      <div class="col s12 m6 center" id="correo">
-        <img src="img/calendar.png">
-        <p>Programar una visita</p>
+    <div class="container">
+        <br><br>
+      <center><h5>Preguntas frecuentes</h5></center>
 
-        <form name="cita">
-          <input type="text" name="" placeholder="Nombre" required="required">          
-          <input type="email" name="" placeholder="E mail" required="required">
-          <input type="number" name="" placeholder="Telefono" required="required"> 
-          <br>
-          <label for="date">Fecha sugerida</label>                   
-          <input type="text" class="datepicker" date="date">
-          <input type="submit" class="btn" value="Enviar" name="">
-        </form>
+      <ul class="collapsible" data-collapsible="accordion">
 
-        <script>
-          $('.datepicker').pickadate({
-            selectMonths: true, // Creates a dropdown to control month
-            selectYears: 15, // Creates a dropdown of 15 years to control year,
-            today: 'Today',
-            clear: 'Clear',
-            close: 'Ok',
-            closeOnSelect: false // Close upon selecting a date,
-          });
-        </script>
-      </div> 
-      <hr class="col s12">
-      <div class="col s12 center"><h5>También puedes llamarnos directamente al +52 12345678 o escribirnos a contacto@ejemplo.com</h5></div>
+            <li>
+                <div class="collapsible-header">Pregunta 1</div>
+                <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
 
+            <li>
+                <div class="collapsible-header">Pregunta 2</div>
+                <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+            </li>
 
-      </div>
+     </ul>
+
+    </div>
   </div>
   </main>
+
+  <script>
+        $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+      
+  </script>
 
 <?php require 'footer.php'; ?>
 
