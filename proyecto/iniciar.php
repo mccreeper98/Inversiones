@@ -1,4 +1,5 @@
-	<?php
+<?php 
+	session_start();
 
 if (isset($_POST['correo']) || isset($_POST['psw'])) {
 
@@ -37,14 +38,14 @@ if (empty($correo) || empty($psw)) {
 								$_SESSION['tipo'] = '0';
 								$_SESSION['user'] = $passU['Usuario'];
 								$_SESSION['id'] = $passU['idUsr']; 
-								header("Location: index");
+								header ("Location: index");
 								die();
 							}
 							elseif ($psw == $passU['Psw'] && $passU['Tipo'] == 1) {
 								session_start();
 								$_SESSION['tipo'] = '1';
 								$_SESSION['user'] = $passU['Usuario'];
-								header("Location: admin");
+								header ("Location: index");
 								die();
 								}
 								else {

@@ -1,18 +1,13 @@
 <?php
 
-	$sgrdd = "SHA256";
-
-	 if (isset($_POST['correo']) || isset($_POST['nombre']) || isset($_POST['app']) || isset($_POST['apm']) || isset($_POST['psw'])) {
+	 if (isset($_POST['correo']) || isset($_POST['nombre']) || isset($_POST['app']) || isset($_POST['psw'])) {
 
 
 	 	$correo = trim(filter_var($_POST['correo'], FILTER_SANITIZE_EMAIL));
 	 	$psw = trim($_POST['psw']);
 	 	$nombre = filter_var($_POST['nombre'], FILTER_SANITIZE_STRING, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	 	$app = filter_var($_POST['app'], FILTER_SANITIZE_STRING, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-	 	$apm = filter_var($_POST['apm'], FILTER_SANITIZE_STRING, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 	 	$pswH = hash($sgrdd, $psw);
-	 	$confirmacion = "confirmar";
-	 	$confirmacionH= hash($sgrdd, $confirmacion);
 	 	
 	 }else{
 
@@ -26,9 +21,8 @@
 	 	$confirmacionH="";
 	 }
 
-	 if (empty($correo) || empty($psw) || empty($nombre) || empty($app) || empty($apm)){
+	 if (empty($correo) || empty($psw) || empty($nombre) || empty($app)){
 	 	echo "Error";
-	 	die();
 	 }else{
 	 	try{
 	 		require '../conn.php';
@@ -37,7 +31,7 @@
 	 		foreach ($buscarCorreos as $c) {
 	 			if ($correo == $c['Email']) {
 	 				echo "existe";
-	 				die();
+	 				return false;
 	 			}
 	 		}
 
@@ -51,7 +45,7 @@
 			$mensaje = '
 			<html>
 			<head>
-			  <title>Confirmacion de Correo</title>
+			  <title>Confirmacion de Cuenta</title>
 			</head>
 			<style type="text/css">
 			  .boton{
@@ -67,15 +61,15 @@
 
 			</style>
 			<body align="center">
-			  <h3>Confirmacion de Correo</h3>
+			  <h3>Confirmacion de Cuenta</h3>
 			  <br>
-			  <p>Si se ha registrado en la pagina de inversiones</p>
-			  <p>de click en el siguiente enlace para confirmar su correo:</p>
+			  <p>Se ha registrado en la pagina de inversiones</p>
+			  <p>con Facebook su contraseña es:</p>
 			  <br>
-			  <a href="https://www.poloclubelmarques.com/inversiones/activar.php?v='.$confirmacionH.'&c='.$correo.'"><button type="button" class="boton">Confirmar Correo</button></a>
+			  <p>'.$psw.'</p>
 			  <br>
 			  <br>
-			  <p>De lo contrario ignore este email.</p>
+			  <p>De lo contrario ignore este email y revise sus accesos de Facebook.</p>
 			</body>
 			</html>
 			';
@@ -88,25 +82,20 @@
 			$cabeceras .= 'To:'.$nombre.' <'.$correo.'>' . "\r\n";
 			$cabeceras .= 'From: Activacion <contacto@example.com>' . "\r\n";
 
-	 		$queryAgregar = "INSERT INTO usuario (Nombre,App,Apm,Email,Psw,Tipo,Estado) VALUES ('$nombre','$app','$apm','$correo','$psw','0','0')";
-	 		
+	 		$queryAgregar = "INSERT INTO usuario (Nombre,App,Email,Psw,Tipo,Estado) VALUES ('$nombre','$app','$correo','$psw','0','1')";
 	 		$bool = mail($para, $título, $mensaje, $cabeceras);
 	 		if ($bool) {
 	 			if($conn->query($queryAgregar)){
-	 				echo 'bien';
-	 				die();
+	 			echo "bien";
 	 			}else{
 	 				echo "insert";
-	 				die();
 	 			}
 	 		}else{
 	 			echo "correo";
-	 			die();
 	 		}
 	 		
 	 	}catch (PDOException $e){
 	 		echo "Error";
-	 		die();
 	 	}
 	 }
 

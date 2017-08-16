@@ -127,15 +127,8 @@
 
     </div>
 
-<<<<<<< Updated upstream
-    <center>
-    <iframe width="620" height="315" src="https://www.youtube.com/embed/mleCn7QVxhs?controls=0&autoplay=1&rel=0&showinfo=0&mute=1" frameborder="0" id="video" allowfullscreen>
+    <iframe width="100%" height="480" src="https://www.youtube.com/embed/mleCn7QVxhs?controls=0&autoplay=1&rel=0&showinfo=0&mute=1" frameborder="0" id="video" allowfullscreen>
     </iframe>
-    </center>
-=======
-    <center><iframe width="620" height="315" src="https://www.youtube.com/embed/mleCn7QVxhs?controls=0&autoplay=1&rel=0&showinfo=0&mute=1" frameborder="0" id="video">
-    </iframe></center>
->>>>>>> Stashed changes
 
     <div class="col s12 white-text center" style="background-color: #605f6a " id="descripcion">
       <div class="container">
