@@ -20,13 +20,14 @@
   <div class="navbar-fixed">
     <nav class="negrobg">
       <div class="nav-wrapper">
-        <div class="container">
-          <a href="../index" class="brand-logo"><img src="../img/logob.png" height="56px" style="padding-top: 10px"></a>
+        <div >
+          <a href="../index" class="brand-logo"><img src="../img/logob.png" class="logoTop"  style="padding-top: 10px"></a>
           <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul class="right hide-on-med-and-down">
             <li><a href="../#funciona">¿Cómo funciona?</a></li>
             <li><a href="../#invertir">¿Por qué nosotros?</a></li>
             <li><a href="../#proyectos">Proyectos</a></li>
+            <li><a href="../FAQ">FAQ</a></li>
             <li><a href="../contacto.php">Contacto</a></li>
             <li><a href="../registra.php"><span class="registro">Registrate</span></a></li>
             <li><a href="../login.php"><span class="ingresar">Ingresar</span></a></li>
@@ -36,6 +37,7 @@
           <li><a href="../#funciona">¿Cómo funciona?</a></li>
           <li><a href="../#invertir">¿Por qué nosotros?</a></li>
           <li><a href="../#proyectos">Proyectos</a></li>
+          <li><a href="../FAQ">FAQ</a></li>
           <li><a href="../contacto.php">Contacto</a></li>
           <li><a href="../registra.php"><span>Registrate</span></a></li>
           <li><a href="../login.php"><span>Ingresar</span></a></li>
